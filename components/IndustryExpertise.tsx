@@ -98,7 +98,7 @@ export default function IndustryExpertise() {
             return (
               <div
                 key={index}
-                ref={(el) => (itemRefs.current[index] = el)}
+                ref={(el: any) => (itemRefs.current[index] = el)}
                 className={`flex flex-col ${
                   isEven ? "lg:flex-row" : "lg:flex-row-reverse"
                 } items-center gap-12`}

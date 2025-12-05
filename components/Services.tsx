@@ -104,7 +104,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              ref={(el) => (cardRefs.current[index] = el)}
+              ref={(el: any) => (cardRefs.current[index] = el)}
               className={`group bg-white border border-[#51CFDF]/40 rounded-xl p-6 hover:border-[#51CFDF]/70 transition-all duration-500 hover:-translate-y-1 ${
                 visibleCards.has(index)
                   ? "opacity-100 translate-y-0"
