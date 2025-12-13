@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import Image from "next/image";
 
 const industries = [
@@ -49,37 +49,9 @@ const industries = [
 ];
 
 export default function IndustryExpertise() {
-  const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeTab, setActiveTab] = useState<number>(0);
 
-  useEffect(() => {
-    const observers: IntersectionObserver[] = [];
-
-    itemRefs.current.forEach((item, index) => {
-      if (!item) return;
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setVisibleItems((prev) => new Set([...prev, index]));
-            }
-          });
-        },
-        {
-          threshold: 0.2,
-          rootMargin: "0px 0px -100px 0px"
-        }
-      );
-
-      observer.observe(item);
-      observers.push(observer);
-    });
-
-    return () => {
-      observers.forEach((observer) => observer.disconnect());
-    };
-  }, []);
+  const activeIndustry = industries[activeTab];
 
   return (
     <section className="py-20 bg-white">
@@ -90,69 +62,56 @@ export default function IndustryExpertise() {
             Customers' Expectations
           </span>
         </h2>
-        <div className="space-y-20">
-          {industries.map((industry, index) => {
-            const isVisible = visibleItems.has(index);
-            const isEven = index % 2 === 0;
-
-            return (
-              <div
-                key={index}
-                ref={(el: any) => (itemRefs.current[index] = el)}
-                className={`flex flex-col ${
-                  isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-                } items-center gap-12`}
-              >
-                <div className="flex-1">
-                  <div className="relative">
-                    <div
-                      className={`absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-[#0859B2] to-[#51CFDF] rounded-full flex items-center justify-center text-[#0859B2] font-bold text-xl z-10 shadow-lg shadow-[#51CFDF]/30 transition-all duration-700 ${
-                        isVisible
-                          ? "opacity-100 scale-100 rotate-0"
-                          : "opacity-0 scale-0 rotate-180"
-                      }`}
-                    >
-                      {industry.number}
-                    </div>
-                    <div
-                      className={`bg-white border border-[#51CFDF]/30 rounded-xl overflow-hidden aspect-video relative transition-all duration-700 ${
-                        isVisible
-                          ? "opacity-100 translate-x-0 translate-y-0"
-                          : `opacity-0 ${
-                              isEven ? "-translate-x-12" : "translate-x-12"
-                            } translate-y-8`
-                      }`}
-                    >
-                      <Image
-                        src={industry.image}
-                        alt={industry.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className={`flex-1 transition-all duration-700 ${
-                    isVisible
-                      ? "opacity-100 translate-x-0 translate-y-0"
-                      : `opacity-0 ${
-                          isEven ? "translate-x-12" : "-translate-x-12"
-                        } translate-y-8`
+        
+        <div className="max-w-6xl mx-auto">
+          {/* Tabs Navigation */}
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 border-b border-[#51CFDF]/20 pb-4">
+            {industries.map((industry, index) => {
+              const isActive = activeTab === index;
+              return (
+                <button
+                  key={index}
+                  onClick={() => setActiveTab(index)}
+                  className={`px-4 md:px-6 py-3 md:py-4 rounded-lg font-semibold text-sm md:text-base transition-all duration-300 ${
+                    isActive
+                      ? "bg-gradient-to-r from-[#0859B2] to-[#51CFDF] text-white shadow-lg shadow-[#51CFDF]/30"
+                      : "bg-white text-[#0859B2] border border-[#51CFDF]/30 hover:bg-[#51CFDF]/10 hover:border-[#51CFDF]/50"
                   }`}
                 >
-                  <h3 className="text-3xl font-bold text-[#0859B2] mb-4">
-                    {industry.title}
-                  </h3>
-                  <p className="text-gray-400 text-lg leading-relaxed">
-                    {industry.description}
-                  </p>
+                  {industry.title}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Tab Content */}
+          <div className="mt-8">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Image */}
+              <div className="relative">
+                <div className="bg-white border border-[#51CFDF]/30 rounded-xl overflow-hidden aspect-video relative">
+                  <Image
+                    src={activeIndustry.image}
+                    alt={activeIndustry.title}
+                    fill
+                    className="object-cover transition-opacity duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 </div>
               </div>
-            );
-          })}
+              
+              {/* Description */}
+              <div>
+                <h3 className="text-3xl font-bold text-[#0859B2] mb-4">
+                  {activeIndustry.title}
+                </h3>
+                <p className="text-gray-400 text-base md:text-lg leading-relaxed">
+                  {activeIndustry.description}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
