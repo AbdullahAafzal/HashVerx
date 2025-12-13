@@ -65,7 +65,7 @@ export default function IndustryExpertise() {
         
         <div className="max-w-6xl mx-auto">
           {/* Tabs Navigation */}
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 border-b border-[#51CFDF]/20 pb-4">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4 pb-6 md:pb-8">
             {industries.map((industry, index) => {
               const isActive = activeTab === index;
               return (
@@ -75,7 +75,7 @@ export default function IndustryExpertise() {
                   className={`px-4 md:px-6 py-3 md:py-4 rounded-lg font-semibold text-sm md:text-base transition-all duration-300 ${
                     isActive
                       ? "bg-gradient-to-r from-[#0859B2] to-[#51CFDF] text-white shadow-lg shadow-[#51CFDF]/30"
-                      : "bg-white text-[#0859B2] border border-[#51CFDF]/30 hover:bg-[#51CFDF]/10 hover:border-[#51CFDF]/50"
+                      : "bg-white text-[#0859B2] border border-[#51CFDF]/60 hover:bg-[#51CFDF]/10 hover:border-[#51CFDF]/70"
                   }`}
                 >
                   {industry.title}
@@ -83,13 +83,19 @@ export default function IndustryExpertise() {
               );
             })}
           </div>
-
+        </div>
+      </div>
+      {/* Full-width border line */}
+      <div className="border-b border-[#51CFDF]/60 w-full mb-8"></div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
           {/* Tab Content */}
           <div className="mt-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Image */}
               <div className="relative">
-                <div className="bg-white border border-[#51CFDF]/30 rounded-xl overflow-hidden aspect-video relative">
+                <div className="bg-white border border-[#51CFDF]/60 rounded-xl overflow-hidden aspect-video relative">
                   <Image
                     src={activeIndustry.image}
                     alt={activeIndustry.title}

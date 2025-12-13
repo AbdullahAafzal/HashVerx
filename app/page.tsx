@@ -5,7 +5,6 @@ import Services from '@/components/Services';
 import LatestProjects from '@/components/LatestProjects';
 import IndustryExpertise from '@/components/IndustryExpertise';
 // import WorkWithUs from '@/components/WorkWithUs';
-import AboutCompany from '@/components/AboutCompany';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 
@@ -19,7 +18,6 @@ export default function Home() {
       <LatestProjects />
       <IndustryExpertise />
       {/* <WorkWithUs /> */}
-      <AboutCompany />
       <ContactForm />
       <Footer />
     </main>

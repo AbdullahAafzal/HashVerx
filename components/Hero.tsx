@@ -106,10 +106,10 @@ export default function Hero() {
           automation, tailored to meet your unique needs.
         </p>
         <a
-          href="#contact"
+          href="/contact"
           className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#0859B2] to-[#51CFDF] hover:from-[#51CFDF] hover:to-[#6dd9e8] text-white px-6 py-3 rounded-lg font-semibold text-sm md:text-base transition-all shadow-lg shadow-[#51CFDF]/20 hover:shadow-xl hover:shadow-[#51CFDF]/30 hover:scale-105 transform uppercase tracking-wide font-sans"
         >
-          <span>See What We've Built</span>
+          <span>Speed up development</span>
           <svg
             className="w-5 h-5"
             fill="none"

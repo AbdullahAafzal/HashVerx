@@ -73,16 +73,6 @@ export default function Header() {
             >
               Home
             </Link>
-            <Link
-              href="/about"
-              className={`font-semibold text-sm transition-colors ${
-                isActive("/about")
-                  ? "text-[#51CFDF]"
-                  : "text-[#0859B2] hover:text-[#51CFDF]"
-              }`}
-            >
-              About Us
-            </Link>
             <div
               className="relative"
               onMouseEnter={() => setIsServicesOpen(true)}
@@ -95,7 +85,7 @@ export default function Header() {
                     : "text-[#0859B2] hover:text-[#51CFDF]"
                 }`}
               >
-                <span>Services</span>
+                <span>Expertise</span>
                 <svg
                   className="w-3.5 h-3.5"
                   fill="none"
@@ -157,7 +147,7 @@ export default function Header() {
             href="/contact"
             className="bg-gradient-to-r from-[#0859B2] to-[#51CFDF] hover:from-[#51CFDF] hover:to-[#6dd9e8] text-white px-5 py-2 rounded-lg font-medium text-sm transition-all flex items-center space-x-1.5 shadow-lg shadow-[#51CFDF]/20 hover:shadow-xl hover:shadow-[#51CFDF]/30 hover:scale-105 transform"
           >
-            <span>BOOK A MEETING</span>
+            <span>CONTACT US</span>
             <svg
               className="w-3.5 h-3.5"
               fill="none"
