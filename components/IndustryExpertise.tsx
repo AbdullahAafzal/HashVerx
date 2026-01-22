@@ -91,11 +91,11 @@ export default function IndustryExpertise() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Tab Content */}
-          <div className="mt-8">
+          <div className="mt-2">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Image */}
-              <div className="relative">
-                <div className="bg-white border border-[#51CFDF]/60 rounded-xl overflow-hidden aspect-video relative">
+              <div className="relative flex items-center justify-center">
+                <div className="bg-white border border-[#51CFDF]/60 rounded-xl overflow-hidden aspect-video relative w-full">
                   <Image
                     src={activeIndustry.image}
                     alt={activeIndustry.title}

@@ -2,58 +2,52 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import bankingImage from "../assets/Industries/Banking.png";
+import ecommerceImage from "../assets/Industries/ecommerce.png";
+import educationImage from "../assets/Industries/education.png";
+import healthcareImage from "../assets/Industries/Healthcare.png";
 
-const services = [
+const solutions = [
   {
-    // icon: "💻",
-    title: "Front & Backend Development",
-    slug: "front-backend-development",
-    description: "Robust architecture for seamless digital experiences.",
-    cta: "Discover Our Development Approach"
+    title: "Blockchain Solutions",
+    image: bankingImage, // Using banking image as placeholder - you can replace with actual blockchain image
+    gradient: "from-purple-400 to-blue-400"
   },
   {
-    // icon: "📱",
-    title: "Android & iOS App Development",
-    slug: "android-ios-app-development",
-    description: "Mobile-first solutions for any market.",
-    cta: "Start Your Mobile App Journey"
+    title: "Gaming Solutions",
+    image: ecommerceImage, // Placeholder - replace with gaming image
+    gradient: "from-gray-600 to-gray-700"
   },
   {
-    // icon: "⚙️",
-    title: "Custom Software Development",
-    slug: "custom-software-development",
-    description: "Bespoke solutions for your unique business challenges.",
-    cta: "Explore Custom Solutions"
+    title: "Fintech Solutions",
+    image: bankingImage,
+    gradient: "from-blue-400 to-cyan-400"
   },
   {
-    // icon: "🧠",
-    title: "AI & Machine Learning",
-    slug: "ai-machine-learning-development",
-    description: "Unlock business intelligence and automation.",
-    cta: "See AI in Action"
-  },
-
-  {
-    // icon: "☁️",
-    title: "DevOps & Cloud",
-    slug: "devops-cloud-services",
-    description: "Faster releases, stable infrastructure, lower costs.",
-    cta: "Optimize with DevOps"
+    title: "Ed-Tech Solutions",
+    image: educationImage,
+    gradient: "from-blue-400 to-indigo-400"
   },
   {
-    // icon: "✅",
-    title: "Software Testing",
-    slug: "software-testing",
-    description: "QA that ensures speed, quality, and reliability.",
-    cta: "Ensure Quality"
+    title: "E-commerce Solutions",
+    image: ecommerceImage,
+    gradient: "from-orange-400 to-pink-400"
   },
-
   {
-    // icon: "🏢",
-    title: "Scalable Enterprise Software",
-    slug: "enterprise-software-development",
-    description: "Big solutions for big businesses.",
-    cta: "Scale Enterprise Solutions"
+    title: "Healthcare Solutions",
+    image: healthcareImage,
+    gradient: "from-teal-400 to-cyan-400"
+  },
+  {
+    title: "Real Estate Solutions",
+    image: ecommerceImage, // Placeholder - replace with real estate image
+    gradient: "from-amber-400 to-orange-400"
+  },
+  {
+    title: "On Demand Solutions",
+    image: ecommerceImage, // Placeholder - replace with on-demand image
+    gradient: "from-indigo-400 to-purple-400"
   }
 ];
 
@@ -93,57 +87,154 @@ export default function Services() {
   return (
     <section className="py-20 bg-white relative">
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-          Excellence - When it{" "}
-          <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent">
-            Comes
-          </span>{" "}
-          to
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              ref={(el: any) => (cardRefs.current[index] = el)}
-              className={`group bg-white border border-[#51CFDF]/40 rounded-xl p-6 hover:border-[#51CFDF]/70 transition-all duration-500 hover:-translate-y-1 ${
-                visibleCards.has(index)
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
-              }`}
-              style={{
-                transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
-                transitionDelay: `${index * 0.1}s`,
-                boxShadow:
-                  "0 2px 8px rgba(81, 207, 223, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.03)"
-              }}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+          {/* Left Side - Text Content */}
+          <div className="space-y-6 md:col-span-1 lg:col-span-2">
+            <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+              Featured Insights
+            </p>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+              Stories of our transformations across{" "}
+              <span className="text-[#51CFDF]">Services</span> and{" "}
+              <span className="text-[#51CFDF]">Industries</span>
+            </h3>
+            <p className="text-lg md:text-xl text-gray-600">
+              From Concept to Completion.
+            </p>
+            <Link
+              href="/success-stories"
+              className="inline-flex items-center space-x-2 bg-[#51CFDF] hover:bg-[#6dd9e8] text-white px-8 py-4 rounded-lg font-semibold text-sm transition-all shadow-lg hover:shadow-xl hover:scale-105 transform uppercase tracking-wide"
             >
-              <h3 className="text-lg font-bold text-[#0859B2] mb-3 leading-tight">
-                {service.title}
-              </h3>
-              <p className="text-gray-400 mb-5 leading-relaxed text-sm">
-                {service.description}
-              </p>
-              <Link
-                href={`/services/${service.slug}`}
-                className="inline-flex items-center space-x-2 text-[#51CFDF] hover:text-[#0859B2] transition-colors duration-300 text-xs font-medium"
+              <span>Explore More</span>
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                <span>{service.cta}</span>
-                <svg
-                  className="w-3.5 h-3.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </Link>
+          </div>
+
+          {/* Right Side - Solution Cards Grid (3 columns) */}
+          <div className="md:col-span-1 lg:col-span-3 grid grid-cols-3 gap-4">
+            {/* Column 1: First 2 items */}
+            <div className="flex flex-col gap-4">
+              {solutions.slice(0, 2).map((solution, index) => (
+                <div
+                  key={index}
+                  ref={(el: any) => (cardRefs.current[index] = el)}
+                  className={`group relative aspect-square rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 ${
+                    visibleCards.has(index)
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-8"
+                  }`}
+                  style={{
+                    transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+                    transitionDelay: `${index * 0.1}s`
+                  }}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </Link>
+                  <div className="absolute inset-0">
+                    <Image
+                      src={solution.image}
+                      alt={solution.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 50vw, 20vw"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-50`}></div>
+                  </div>
+                  <div className="absolute inset-0 flex items-end p-4">
+                    <h4 className="text-white font-bold text-base md:text-lg leading-tight">
+                      {solution.title}
+                    </h4>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+
+            {/* Column 2: Next 3 items */}
+            <div className="flex flex-col gap-4">
+              {solutions.slice(2, 5).map((solution, index) => {
+                const actualIndex = index + 2;
+                return (
+                  <div
+                    key={actualIndex}
+                    ref={(el: any) => (cardRefs.current[actualIndex] = el)}
+                    className={`group relative aspect-square rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 ${
+                      visibleCards.has(actualIndex)
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-8"
+                    }`}
+                    style={{
+                      transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+                      transitionDelay: `${actualIndex * 0.1}s`
+                    }}
+                  >
+                    <div className="absolute inset-0">
+                      <Image
+                        src={solution.image}
+                        alt={solution.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 50vw, 20vw"
+                      />
+                      <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-50`}></div>
+                    </div>
+                    <div className="absolute inset-0 flex items-end p-4">
+                      <h4 className="text-white font-bold text-base md:text-lg leading-tight">
+                        {solution.title}
+                      </h4>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Column 3: Last 3 items */}
+            <div className="flex flex-col gap-4">
+              {solutions.slice(5, 8).map((solution, index) => {
+                const actualIndex = index + 5;
+                return (
+                  <div
+                    key={actualIndex}
+                    ref={(el: any) => (cardRefs.current[actualIndex] = el)}
+                    className={`group relative aspect-square rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 ${
+                      visibleCards.has(actualIndex)
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-8"
+                    }`}
+                    style={{
+                      transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+                      transitionDelay: `${actualIndex * 0.1}s`
+                    }}
+                  >
+                    <div className="absolute inset-0">
+                      <Image
+                        src={solution.image}
+                        alt={solution.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 50vw, 20vw"
+                      />
+                      <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-50`}></div>
+                    </div>
+                    <div className="absolute inset-0 flex items-end p-4">
+                      <h4 className="text-white font-bold text-base md:text-lg leading-tight">
+                        {solution.title}
+                      </h4>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,3 +1,7 @@
 {
+  "/careers/page": "app/careers/page.js",
+  "/success-stories/page": "app/success-stories/page.js",
+  "/careers/[id]/page": "app/careers/[id]/page.js",
+  "/contact/page": "app/contact/page.js",
   "/page": "app/page.js"
 }
