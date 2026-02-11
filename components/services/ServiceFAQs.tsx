@@ -54,7 +54,13 @@ export default function ServiceFAQs() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-6 py-4 flex items-center justify-between text-left"
               >
-                <span className="text-lg font-semibold text-white pr-4">{faq.question}</span>
+                <span
+                  className={`text-lg font-semibold pr-4 transition-colors ${
+                    openIndex === index ? 'text-gray-900' : 'text-gray-500'
+                  }`}
+                >
+                  {faq.question}
+                </span>
                 <div className="flex-shrink-0">
                   <svg
                     className={`w-6 h-6 text-[#51CFDF] transition-transform duration-300 ${
@@ -70,7 +76,7 @@ export default function ServiceFAQs() {
               </button>
               {openIndex === index && (
                 <div className="px-6 pb-4">
-                  <p className="text-base text-gray-300 leading-relaxed">{faq.answer}</p>
+                  <p className="text-base text-gray-900 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
