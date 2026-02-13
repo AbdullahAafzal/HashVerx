@@ -3,9 +3,10 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import type { StaticImageData } from 'next/image';
 
 interface ServiceHeroSectionProps {
-  image: string;
+  image: string | StaticImageData;
   imageAlt: string;
   label: string;
   title: string;

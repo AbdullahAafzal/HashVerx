@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import backgroundImage from '../../assets/appDevelopment/background.jpeg';
+import mainImage from '../../assets/Mobile/main.jpg';
 
 export default function MobileAppHero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,7 +24,7 @@ export default function MobileAppHero() {
     <section className="relative min-h-[90vh] flex items-end justify-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src={backgroundImage}
+          src={mainImage}
           alt="Mobile app development"
           fill
           className="object-cover"

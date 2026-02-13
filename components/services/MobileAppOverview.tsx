@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import backgroundImage from '../../assets/appDevelopment/background.jpeg';
+import overviewImage from '../../assets/Mobile/overview.jpg';
 
 const capabilities = [
   {
@@ -83,7 +83,7 @@ export default function MobileAppOverview() {
             }`}
           >
             <Image
-              src={backgroundImage}
+              src={overviewImage}
               alt="Mobile app development"
               fill
               className="object-cover object-center"

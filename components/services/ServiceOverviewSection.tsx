@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import type { StaticImageData } from 'next/image';
 
 export interface OverviewCapability {
   title: string;
@@ -11,7 +12,7 @@ export interface OverviewCapability {
 interface ServiceOverviewSectionProps {
   intro: string;
   capabilities: OverviewCapability[];
-  image: string;
+  image: string | StaticImageData;
   imageAlt: string;
   capabilitiesHeading?: string;
 }

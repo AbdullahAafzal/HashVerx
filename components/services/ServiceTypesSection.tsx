@@ -3,11 +3,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import type { StaticImageData } from 'next/image';
 
 export interface ServiceTypeItem {
   id: string;
   title: string;
-  image: string;
+  image: string | StaticImageData;
   hoverText: string;
 }
 
@@ -46,7 +47,7 @@ export default function ServiceTypesSection({ sectionTitle, items }: ServiceType
                   <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors duration-300" />
                 </div>
                 <div
-                  className={`absolute inset-0 p-5 flex flex-col justify-between bg-black/85 pt-14 pb-20 transition-all duration-500 ease-out ${
+                  className={`absolute inset-0 p-5 flex flex-col justify-between bg-black/60 pt-14 pb-20 transition-all duration-500 ease-out ${
                     isHovered
                       ? 'opacity-100 translate-y-0'
                       : 'opacity-0 translate-y-4 pointer-events-none'
@@ -67,9 +68,6 @@ export default function ServiceTypesSection({ sectionTitle, items }: ServiceType
                     Get in Touch
                   </Link>
                 </div>
-                {isHovered && (
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#51CFDF] z-10" />
-                )}
               </div>
             );
           })}

@@ -9,6 +9,11 @@ import ServiceTypesSection from '../ServiceTypesSection';
 import type { OverviewCapability } from '../ServiceOverviewSection';
 import type { ServiceTypeItem } from '../ServiceTypesSection';
 import ServiceTechStack from '../ServiceTechStack';
+import mainImage from '../../../assets/Software/main.jpg';
+import overviewImage from '../../../assets/Software/overview.jpg';
+import webAppsImage from '../../../assets/Software/WebApplications.jpg';
+import saasImage from '../../../assets/Software/SaaSPlatforms.jpg';
+import businessSystemsImage from '../../../assets/Software/BusinessSystems.jpg';
 
 const slug = 'custom-software-development';
 const service = servicesData[slug];
@@ -19,13 +24,10 @@ const overviewCapabilities: OverviewCapability[] = buildItems.map((item) => ({ t
 const whyUs = service.sections.find((s) => s.id === 'why-us');
 const contact = service.sections.find((s) => s.id === 'contact');
 
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80';
-const OVERVIEW_IMAGE = 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80';
-
 const TYPES_ITEMS: ServiceTypeItem[] = [
-  { id: 'web', title: 'Web Applications', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80', hoverText: 'We build custom web applications tailored to your business. From responsive front-ends to scalable back-ends, our solutions drive growth and efficiency with modern technologies and best practices.' },
-  { id: 'saas', title: 'SaaS Platforms', image: 'https://images.unsplash.com/photo-1551431009-a802eeec77b1?w=800&q=80', hoverText: 'Scalable SaaS products that grow with your users. We deliver multi-tenant architecture, subscription management, and analytics so you can focus on your customers and product.' },
-  { id: 'business', title: 'Business Systems', image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80', hoverText: 'Internal tools and business systems that streamline operations. We integrate with your existing stack and deliver secure, maintainable software that your team will rely on every day.' },
+  { id: 'web', title: 'Web Applications', image: webAppsImage, hoverText: 'We build custom web applications tailored to your business. From responsive front-ends to scalable back-ends, our solutions drive growth and efficiency with modern technologies and best practices.' },
+  { id: 'saas', title: 'SaaS Platforms', image: saasImage, hoverText: 'Scalable SaaS products that grow with your users. We deliver multi-tenant architecture, subscription management, and analytics so you can focus on your customers and product.' },
+  { id: 'business', title: 'Business Systems', image: businessSystemsImage, hoverText: 'Internal tools and business systems that streamline operations. We integrate with your existing stack and deliver secure, maintainable software that your team will rely on every day.' },
 ];
 
 export default function CustomSoftwareLayout() {
@@ -41,7 +43,7 @@ export default function CustomSoftwareLayout() {
   return (
     <>
       <ServiceHeroSection
-        image={HERO_IMAGE}
+        image={mainImage}
         imageAlt="Custom software development"
         label={service.title}
         title={service.subtitle}
@@ -50,7 +52,7 @@ export default function CustomSoftwareLayout() {
       <ServiceOverviewSection
         intro={service.intro}
         capabilities={overviewCapabilities}
-        image={OVERVIEW_IMAGE}
+        image={overviewImage}
         imageAlt="Custom software development"
         capabilitiesHeading="What we build:"
       />
