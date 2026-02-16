@@ -46,7 +46,7 @@ export default function ServiceHeroSection({ image, imageAlt, label, title, ctaT
         className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24"
       >
         <div
-          className={`rounded-2xl bg-black/50 backdrop-blur-sm px-6 py-8 md:px-10 md:py-10 max-w-2xl transition-all duration-700 ${
+          className={`rounded-2xl bg-black/50 backdrop-blur-sm px-6 py-8 md:px-10 md:py-10 max-w-5xl transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
