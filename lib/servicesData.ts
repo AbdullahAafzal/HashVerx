@@ -156,187 +156,187 @@ From ideation to deployment, Hashverx partners with you to create user-centric S
           "Schedule a free consultation to discuss your Odoo requirements and get a tailored implementation plan."
       }
     ]
-  },
-  "ai-seo-automation": {
-    title: "AI, SEO & Automation Services",
-    subtitle: "Unlock business intelligence and automation with AI and SEO.",
-    slug: "ai-seo-automation",
-    intro:
-      "Transform your business with intelligent automation, AI-powered tools, and SEO that drives visibility. We serve HRMS, Hospital, Real Estate, Retail, Services, and more.",
-    sections: [
-      {
-        id: "overview",
-        title: "Overview",
-        type: "overview",
-        content:
-          "Transform your business with intelligent automation, AI-powered tools, and SEO that drives visibility. We serve HRMS, Hospital, Real Estate, Retail, Services, and more."
-      },
-      {
-        id: "what-we-automate",
-        title: "What We Automate",
-        type: "list",
-        items: ["Business Workflows", "Sales & CRM"]
-      },
-      {
-        id: "ai-seo-capabilities",
-        title: "AI & SEO Capabilities",
-        type: "list",
-        items: [
-          "AI Chatbots",
-          "AI Content & SEO",
-          "Technical SEO",
-          "Analytics & Reporting",
-          "Data & Documents",
-          "Customer Support"
-        ]
-      },
-      {
-        id: "business-benefits",
-        title: "Business Benefits",
-        type: "paragraph",
-        content:
-          "Reduce manual work, improve accuracy, and scale operations. Our AI and automation solutions deliver measurable ROI across industries."
-      },
-      {
-        id: "start-automation",
-        title: "Start Automation",
-        type: "paragraph",
-        content:
-          "Tell us your goals and we'll design an automation and AI strategy that fits your business."
-      }
-    ]
-  },
-  "data-scraping-web-crawling": {
-    title: "Data Scraping & Web Crawling",
-    subtitle: "Clean, structured data from the web—delivered your way.",
-    slug: "data-scraping-web-crawling",
-    intro:
-      "We collect, clean, and deliver web data from websites, marketplaces, and public platforms. Get structured data in CSV, JSON, or via API for your analytics and applications.",
-    sections: [
-      {
-        id: "overview",
-        title: "Overview",
-        type: "overview",
-        content:
-          "We collect, clean, and deliver web data from websites, marketplaces, and public platforms. Get structured data in CSV, JSON, or via API for your analytics and applications."
-      },
-      {
-        id: "data-sources",
-        title: "Data Sources",
-        type: "list",
-        items: ["Websites", "Marketplaces", "Public Platforms"]
-      },
-      {
-        id: "deliverables",
-        title: "Deliverables",
-        type: "list",
-        items: ["Clean Structured Data", "CSV, JSON, API Access"]
-      },
-      {
-        id: "automation",
-        title: "Automation",
-        type: "paragraph",
-        content:
-          "Scheduled crawls and automated pipelines so your data stays up to date without manual effort."
-      },
-      {
-        id: "request-sample",
-        title: "Request Sample",
-        type: "paragraph",
-        content:
-          "Not sure what's possible? Request a sample dataset for your use case and we'll show you the quality and format we deliver."
-      }
-    ]
-  },
-  "website-design-development": {
-    title: "Website Design & Development",
-    subtitle: "Modern, fast, and SEO-ready websites.",
-    slug: "website-design-development",
-    intro:
-      "Our full-stack web application development services include everything from ideation and design to development and launch. Our expert team of developers specialize in creating custom websites that are visually stunning, intuitive, and functional. Whether it’s a static website or a dynamic web application, we use the latest technologies to build high-performance websites that deliver measurable results.",
-    sections: [
-      {
-        id: "overview",
-        title: "Overview",
-        type: "overview",
-        content:
-          "Our full-stack web application development services include everything from ideation and design to development and launch. Our expert team of developers specialize in creating custom websites that are visually stunning, intuitive, and functional. Whether it’s a static website or a dynamic web application, we use the latest technologies to build high-performance websites that deliver measurable results."
-      },
-      {
-        id: "website-types",
-        title: "Website Types",
-        type: "list",
-        items: [
-          "Corporate Websites",
-          "Product / SaaS Websites",
-          "Landing Pages",
-          "CMS Websites"
-        ]
-      },
-      {
-        id: "tech-stack",
-        title: "Tech Stack",
-        type: "list",
-        items: ["React", "WordPress"]
-      },
-      {
-        id: "seo-ready",
-        title: "SEO Ready",
-        type: "paragraph",
-        content:
-          "All our websites are built with SEO best practices—speed, structure, and metadata—so you rank and attract the right traffic."
-      },
-      {
-        id: "view-work",
-        title: "View Work",
-        type: "paragraph",
-        content:
-          "Explore our portfolio of website projects and see the quality and variety we deliver."
-      }
-    ]
-  },
-  "ui-ux-graphic-video-design": {
-    title: "UI/UX, Graphic & Video Design",
-    subtitle: "Design and video that engage and convert.",
-    slug: "ui-ux-graphic-video-design",
-    intro:
-      "From UI/UX and branding to marketing creatives and video, we deliver design that aligns with your brand and drives results.",
-    sections: [
-      {
-        id: "overview",
-        title: "Overview",
-        type: "overview",
-        content:
-          "From UI/UX and branding to marketing creatives and video, we deliver design that aligns with your brand and drives results."
-      },
-      {
-        id: "design-services",
-        title: "Design Services",
-        type: "list",
-        items: ["UI/UX Design", "Branding", "Marketing Creatives"]
-      },
-      {
-        id: "video-services",
-        title: "Video Services",
-        type: "list",
-        items: ["Explainer Videos", "Promo & Motion Graphics"]
-      },
-      {
-        id: "portfolio",
-        title: "Portfolio",
-        type: "paragraph",
-        content:
-          "Browse our design and video work to see the quality and range we bring to every project."
-      },
-      {
-        id: "contact",
-        title: "Contact",
-        type: "paragraph",
-        content:
-          "Have a project in mind? Get in touch to discuss your design and video needs."
-      }
-    ]
   }
+  // "ai-seo-automation": {
+  //   title: "AI, SEO & Automation Services",
+  //   subtitle: "Unlock business intelligence and automation with AI and SEO.",
+  //   slug: "ai-seo-automation",
+  //   intro:
+  //     "Transform your business with intelligent automation, AI-powered tools, and SEO that drives visibility. We serve HRMS, Hospital, Real Estate, Retail, Services, and more.",
+  //   sections: [
+  //     {
+  //       id: "overview",
+  //       title: "Overview",
+  //       type: "overview",
+  //       content:
+  //         "Transform your business with intelligent automation, AI-powered tools, and SEO that drives visibility. We serve HRMS, Hospital, Real Estate, Retail, Services, and more."
+  //     },
+  //     {
+  //       id: "what-we-automate",
+  //       title: "What We Automate",
+  //       type: "list",
+  //       items: ["Business Workflows", "Sales & CRM"]
+  //     },
+  //     {
+  //       id: "ai-seo-capabilities",
+  //       title: "AI & SEO Capabilities",
+  //       type: "list",
+  //       items: [
+  //         "AI Chatbots",
+  //         "AI Content & SEO",
+  //         "Technical SEO",
+  //         "Analytics & Reporting",
+  //         "Data & Documents",
+  //         "Customer Support"
+  //       ]
+  //     },
+  //     {
+  //       id: "business-benefits",
+  //       title: "Business Benefits",
+  //       type: "paragraph",
+  //       content:
+  //         "Reduce manual work, improve accuracy, and scale operations. Our AI and automation solutions deliver measurable ROI across industries."
+  //     },
+  //     {
+  //       id: "start-automation",
+  //       title: "Start Automation",
+  //       type: "paragraph",
+  //       content:
+  //         "Tell us your goals and we'll design an automation and AI strategy that fits your business."
+  //     }
+  //   ]
+  // },
+  // "data-scraping-web-crawling": {
+  //   title: "Data Scraping & Web Crawling",
+  //   subtitle: "Clean, structured data from the web—delivered your way.",
+  //   slug: "data-scraping-web-crawling",
+  //   intro:
+  //     "We collect, clean, and deliver web data from websites, marketplaces, and public platforms. Get structured data in CSV, JSON, or via API for your analytics and applications.",
+  //   sections: [
+  //     {
+  //       id: "overview",
+  //       title: "Overview",
+  //       type: "overview",
+  //       content:
+  //         "We collect, clean, and deliver web data from websites, marketplaces, and public platforms. Get structured data in CSV, JSON, or via API for your analytics and applications."
+  //     },
+  //     {
+  //       id: "data-sources",
+  //       title: "Data Sources",
+  //       type: "list",
+  //       items: ["Websites", "Marketplaces", "Public Platforms"]
+  //     },
+  //     {
+  //       id: "deliverables",
+  //       title: "Deliverables",
+  //       type: "list",
+  //       items: ["Clean Structured Data", "CSV, JSON, API Access"]
+  //     },
+  //     {
+  //       id: "automation",
+  //       title: "Automation",
+  //       type: "paragraph",
+  //       content:
+  //         "Scheduled crawls and automated pipelines so your data stays up to date without manual effort."
+  //     },
+  //     {
+  //       id: "request-sample",
+  //       title: "Request Sample",
+  //       type: "paragraph",
+  //       content:
+  //         "Not sure what's possible? Request a sample dataset for your use case and we'll show you the quality and format we deliver."
+  //     }
+  //   ]
+  // },
+  // "website-design-development": {
+  //   title: "Website Design & Development",
+  //   subtitle: "Modern, fast, and SEO-ready websites.",
+  //   slug: "website-design-development",
+  //   intro:
+  //     "Our full-stack web application development services include everything from ideation and design to development and launch. Our expert team of developers specialize in creating custom websites that are visually stunning, intuitive, and functional. Whether it’s a static website or a dynamic web application, we use the latest technologies to build high-performance websites that deliver measurable results.",
+  //   sections: [
+  //     {
+  //       id: "overview",
+  //       title: "Overview",
+  //       type: "overview",
+  //       content:
+  //         "Our full-stack web application development services include everything from ideation and design to development and launch. Our expert team of developers specialize in creating custom websites that are visually stunning, intuitive, and functional. Whether it’s a static website or a dynamic web application, we use the latest technologies to build high-performance websites that deliver measurable results."
+  //     },
+  //     {
+  //       id: "website-types",
+  //       title: "Website Types",
+  //       type: "list",
+  //       items: [
+  //         "Corporate Websites",
+  //         "Product / SaaS Websites",
+  //         "Landing Pages",
+  //         "CMS Websites"
+  //       ]
+  //     },
+  //     {
+  //       id: "tech-stack",
+  //       title: "Tech Stack",
+  //       type: "list",
+  //       items: ["React", "WordPress"]
+  //     },
+  //     {
+  //       id: "seo-ready",
+  //       title: "SEO Ready",
+  //       type: "paragraph",
+  //       content:
+  //         "All our websites are built with SEO best practices—speed, structure, and metadata—so you rank and attract the right traffic."
+  //     },
+  //     {
+  //       id: "view-work",
+  //       title: "View Work",
+  //       type: "paragraph",
+  //       content:
+  //         "Explore our portfolio of website projects and see the quality and variety we deliver."
+  //     }
+  //   ]
+  // },
+  // "ui-ux-graphic-video-design": {
+  //   title: "UI/UX, Graphic & Video Design",
+  //   subtitle: "Design and video that engage and convert.",
+  //   slug: "ui-ux-graphic-video-design",
+  //   intro:
+  //     "From UI/UX and branding to marketing creatives and video, we deliver design that aligns with your brand and drives results.",
+  //   sections: [
+  //     {
+  //       id: "overview",
+  //       title: "Overview",
+  //       type: "overview",
+  //       content:
+  //         "From UI/UX and branding to marketing creatives and video, we deliver design that aligns with your brand and drives results."
+  //     },
+  //     {
+  //       id: "design-services",
+  //       title: "Design Services",
+  //       type: "list",
+  //       items: ["UI/UX Design", "Branding", "Marketing Creatives"]
+  //     },
+  //     {
+  //       id: "video-services",
+  //       title: "Video Services",
+  //       type: "list",
+  //       items: ["Explainer Videos", "Promo & Motion Graphics"]
+  //     },
+  //     {
+  //       id: "portfolio",
+  //       title: "Portfolio",
+  //       type: "paragraph",
+  //       content:
+  //         "Browse our design and video work to see the quality and range we bring to every project."
+  //     },
+  //     {
+  //       id: "contact",
+  //       title: "Contact",
+  //       type: "paragraph",
+  //       content:
+  //         "Have a project in mind? Get in touch to discuss your design and video needs."
+  //     }
+  //   ]
+  // }
 };
 
 export const servicesList = Object.values(servicesData).map((s) => ({
