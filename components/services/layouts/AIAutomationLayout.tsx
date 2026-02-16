@@ -8,6 +8,11 @@ import ServiceOverviewSection from '../ServiceOverviewSection';
 import ServiceTypesSection from '../ServiceTypesSection';
 import type { OverviewCapability } from '../ServiceOverviewSection';
 import type { ServiceTypeItem } from '../ServiceTypesSection';
+import aiMainImage from '../../../assets/ai/main.jpg';
+import aiOverviewImage from '../../../assets/ai/overview.jpg';
+import aiBusinessWorkflowsImage from '../../../assets/ai/BusinessWorkflows.jpg';
+import aiSeoImage from '../../../assets/ai/Ai&SEo.jpg';
+import aiAnalyticsImage from '../../../assets/ai/Analytics&Support.jpg';
 
 const slug = 'ai-seo-automation';
 const service = servicesData[slug];
@@ -18,13 +23,13 @@ const overviewCapabilities: OverviewCapability[] = capItems.map((item) => ({ tit
 const benefits = service.sections.find((s) => s.id === 'business-benefits');
 const start = service.sections.find((s) => s.id === 'start-automation');
 
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80';
-const OVERVIEW_IMAGE = 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80';
+const HERO_IMAGE = aiMainImage;
+const OVERVIEW_IMAGE = aiOverviewImage;
 
 const TYPES_ITEMS: ServiceTypeItem[] = [
-  { id: 'automation', title: 'Business Workflows', image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80', hoverText: 'We automate repetitive tasks and workflows so your team can focus on high-value work. From approval flows to data sync, our solutions reduce errors and save time across HRMS, retail, and more.' },
-  { id: 'ai', title: 'AI & SEO', image: 'https://images.unsplash.com/photo-1627398242794-2a7a0b25a61d?w=800&q=80', hoverText: 'AI chatbots, content, and technical SEO that drive visibility and engagement. We implement AI-powered tools and SEO strategies tailored to your industry and goals.' },
-  { id: 'analytics', title: 'Analytics & Support', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', hoverText: 'Data-driven reporting and AI-enhanced customer support. We build dashboards, automate insights, and deploy intelligent support tools so you can scale without proportionally scaling headcount.' },
+  { id: 'automation', title: 'Business Workflows', image: aiBusinessWorkflowsImage, hoverText: 'We automate repetitive tasks and workflows so your team can focus on high-value work. From approval flows to data sync, our solutions reduce errors and save time across HRMS, retail, and more.' },
+  { id: 'ai', title: 'AI & SEO', image: aiSeoImage, hoverText: 'AI chatbots, content, and technical SEO that drive visibility and engagement. We implement AI-powered tools and SEO strategies tailored to your industry and goals.' },
+  { id: 'analytics', title: 'Analytics & Support', image: aiAnalyticsImage, hoverText: 'Data-driven reporting and AI-enhanced customer support. We build dashboards, automate insights, and deploy intelligent support tools so you can scale without proportionally scaling headcount.' },
 ];
 
 const CAP_ICONS = ['🤖', '📝', '🔍', '📊', '📁', '💬'];

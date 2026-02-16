@@ -8,6 +8,11 @@ import ServiceOverviewSection from '../ServiceOverviewSection';
 import ServiceTypesSection from '../ServiceTypesSection';
 import type { OverviewCapability } from '../ServiceOverviewSection';
 import type { ServiceTypeItem } from '../ServiceTypesSection';
+import uiuxMainImage from '../../../assets/UIUX/main.jpg';
+import uiuxOverviewImage from '../../../assets/UIUX/overview.jpg';
+import uiuxDesignImage from '../../../assets/UIUX/UIUXDesign.jpg';
+import uiuxBrandingImage from '../../../assets/UIUX/Branding&Creatives.jpg';
+import uiuxVideoImage from '../../../assets/UIUX/video.jpg';
 
 const slug = 'ui-ux-graphic-video-design';
 const service = servicesData[slug];
@@ -20,13 +25,13 @@ const overviewCapabilities: OverviewCapability[] = [...designItems.map((item) =>
 const portfolio = service.sections.find((s) => s.id === 'portfolio');
 const contact = service.sections.find((s) => s.id === 'contact');
 
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1920&q=80';
-const OVERVIEW_IMAGE = 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80';
+const HERO_IMAGE = uiuxMainImage;
+const OVERVIEW_IMAGE = uiuxOverviewImage;
 
 const TYPES_ITEMS: ServiceTypeItem[] = [
-  { id: 'uiux', title: 'UI/UX Design', image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80', hoverText: 'User-centered interface and experience design that aligns with your product and brand. We deliver wireframes, prototypes, and high-fidelity designs so development builds the right experience from the start.' },
-  { id: 'branding', title: 'Branding & Creatives', image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80', hoverText: 'Brand identity and marketing creatives that stand out. From logos and guidelines to social and campaign assets, we create a consistent visual language that engages and converts your audience.' },
-  { id: 'video', title: 'Video & Motion', image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80', hoverText: 'Explainer videos, promos, and motion graphics that communicate your message clearly. We script, storyboard, and produce video content that fits your brand and performs across channels.' },
+  { id: 'uiux', title: 'UI/UX Design', image: uiuxDesignImage, hoverText: 'User-centered interface and experience design that aligns with your product and brand. We deliver wireframes, prototypes, and high-fidelity designs so development builds the right experience from the start.' },
+  { id: 'branding', title: 'Branding & Creatives', image: uiuxBrandingImage, hoverText: 'Brand identity and marketing creatives that stand out. From logos and guidelines to social and campaign assets, we create a consistent visual language that engages and converts your audience.' },
+  { id: 'video', title: 'Video & Motion', image: uiuxVideoImage, hoverText: 'Explainer videos, promos, and motion graphics that communicate your message clearly. We script, storyboard, and produce video content that fits your brand and performs across channels.' },
 ];
 
 export default function UIUXDesignLayout() {

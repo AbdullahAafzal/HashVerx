@@ -8,6 +8,11 @@ import ServiceOverviewSection from '../ServiceOverviewSection';
 import ServiceTypesSection from '../ServiceTypesSection';
 import type { OverviewCapability } from '../ServiceOverviewSection';
 import type { ServiceTypeItem } from '../ServiceTypesSection';
+import dataScrapingMainImage from '../../../assets/DataScraping/main.jpg';
+import dataScrapingOverviewImage from '../../../assets/DataScraping/overview.jpg';
+import dataScrapingWebsitesImage from '../../../assets/DataScraping/Websites.jpg';
+import dataScrapingMarketplacesImage from '../../../assets/DataScraping/Marketplaces.jpg';
+import dataScrapingPlatformsImage from '../../../assets/DataScraping/PublicPlatforms.jpg';
 
 const slug = 'data-scraping-web-crawling';
 const service = servicesData[slug];
@@ -20,13 +25,13 @@ const overviewCapabilities: OverviewCapability[] = sourceItems.map((item) => ({ 
 const automation = service.sections.find((s) => s.id === 'automation');
 const request = service.sections.find((s) => s.id === 'request-sample');
 
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80';
-const OVERVIEW_IMAGE = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80';
+const HERO_IMAGE = dataScrapingMainImage;
+const OVERVIEW_IMAGE = dataScrapingOverviewImage;
 
 const TYPES_ITEMS: ServiceTypeItem[] = [
-  { id: 'websites', title: 'Websites', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80', hoverText: 'We collect and structure data from websites at scale. Whether you need product data, pricing, or content, we deliver clean, reliable datasets on a schedule that fits your workflow.' },
-  { id: 'marketplaces', title: 'Marketplaces', image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80', hoverText: 'Marketplace and e-commerce data for competitive intelligence and pricing. We handle complex structures and anti-scraping measures so you get the data you need in CSV, JSON, or via API.' },
-  { id: 'platforms', title: 'Public Platforms', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', hoverText: 'Structured data from public platforms and directories. We design crawlers that respect terms of use and deliver normalized data ready for analytics, ML, or integration into your applications.' },
+  { id: 'websites', title: 'Websites', image: dataScrapingWebsitesImage, hoverText: 'We collect and structure data from websites at scale. Whether you need product data, pricing, or content, we deliver clean, reliable datasets on a schedule that fits your workflow.' },
+  { id: 'marketplaces', title: 'Marketplaces', image: dataScrapingMarketplacesImage, hoverText: 'Marketplace and e-commerce data for competitive intelligence and pricing. We handle complex structures and anti-scraping measures so you get the data you need in CSV, JSON, or via API.' },
+  { id: 'platforms', title: 'Public Platforms', image: dataScrapingPlatformsImage, hoverText: 'Structured data from public platforms and directories. We design crawlers that respect terms of use and deliver normalized data ready for analytics, ML, or integration into your applications.' },
 ];
 
 export default function DataScrapingLayout() {

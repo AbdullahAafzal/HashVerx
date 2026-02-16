@@ -8,6 +8,11 @@ import ServiceOverviewSection from '../ServiceOverviewSection';
 import ServiceTypesSection from '../ServiceTypesSection';
 import type { OverviewCapability } from '../ServiceOverviewSection';
 import type { ServiceTypeItem } from '../ServiceTypesSection';
+import odooMainImage from '../../../assets/odoo/main.jpg';
+import odooOverviewImage from '../../../assets/odoo/overview.jpg';
+import odooImplementationImage from '../../../assets/odoo/Implementation&Customization.jpg';
+import odooCustomModulesImage from '../../../assets/odoo/CustomModules.jpg';
+import odooIntegrationsImage from '../../../assets/odoo/Integrations&AMC.jpg';
 
 const slug = 'odoo-erp-services';
 const service = servicesData[slug];
@@ -19,13 +24,13 @@ const industry = service.sections.find((s) => s.id === 'industry-solutions');
 const support = service.sections.find((s) => s.id === 'support-migration');
 const book = service.sections.find((s) => s.id === 'book-consultation');
 
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80';
-const OVERVIEW_IMAGE = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80';
+const HERO_IMAGE = odooMainImage;
+const OVERVIEW_IMAGE = odooOverviewImage;
 
 const TYPES_ITEMS: ServiceTypeItem[] = [
-  { id: 'impl', title: 'Implementation & Customization', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80', hoverText: 'We implement Odoo from the ground up and customize it to fit your processes. Our experts ensure a smooth rollout, user training, and adoption so you get value from day one.' },
-  { id: 'modules', title: 'Custom Modules', image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80', hoverText: 'Extend Odoo with custom modules built for your industry and workflows. We develop and integrate modules that align with your business rules and reporting needs.' },
-  { id: 'integrations', title: 'Integrations & AMC', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80', hoverText: 'Connect Odoo to your existing systems and keep it running with upgrades and AMC. We handle integrations, data migration, and ongoing support so your ERP stays current and reliable.' },
+  { id: 'impl', title: 'Implementation & Customization', image: odooImplementationImage, hoverText: 'We implement Odoo from the ground up and customize it to fit your processes. Our experts ensure a smooth rollout, user training, and adoption so you get value from day one.' },
+  { id: 'modules', title: 'Custom Modules', image: odooCustomModulesImage, hoverText: 'Extend Odoo with custom modules built for your industry and workflows. We develop and integrate modules that align with your business rules and reporting needs.' },
+  { id: 'integrations', title: 'Integrations & AMC', image: odooIntegrationsImage, hoverText: 'Connect Odoo to your existing systems and keep it running with upgrades and AMC. We handle integrations, data migration, and ongoing support so your ERP stays current and reliable.' },
 ];
 
 const MODULE_ICONS = [

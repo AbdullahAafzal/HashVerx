@@ -8,6 +8,11 @@ import ServiceOverviewSection from '../ServiceOverviewSection';
 import ServiceTypesSection from '../ServiceTypesSection';
 import type { OverviewCapability } from '../ServiceOverviewSection';
 import type { ServiceTypeItem } from '../ServiceTypesSection';
+import websiteMainImage from '../../../assets/WebsiteDesign/main.jpg';
+import websiteOverviewImage from '../../../assets/WebsiteDesign/overview.jpg';
+import websiteCorporateImage from '../../../assets/WebsiteDesign/CorporateWebsites.jpg';
+import websiteSaaSImage from '../../../assets/WebsiteDesign/ProductSaaSWebsites.jpg';
+import websiteCMSImage from '../../../assets/WebsiteDesign/CMS&LandingPages.jpg';
 
 const slug = 'website-design-development';
 const service = servicesData[slug];
@@ -20,13 +25,13 @@ const stackItems = techStack?.type === 'list' ? techStack.items : [];
 const seo = service.sections.find((s) => s.id === 'seo-ready');
 const viewWork = service.sections.find((s) => s.id === 'view-work');
 
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1920&q=80';
-const OVERVIEW_IMAGE = 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80';
+const HERO_IMAGE = websiteMainImage;
+const OVERVIEW_IMAGE = websiteOverviewImage;
 
 const TYPES_ITEMS: ServiceTypeItem[] = [
-  { id: 'corporate', title: 'Corporate Websites', image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80', hoverText: 'Professional corporate sites that represent your brand and convert visitors. We combine clear messaging, modern design, and performance so your company makes a strong first impression.' },
-  { id: 'saas', title: 'Product / SaaS Websites', image: 'https://images.unsplash.com/photo-1551431009-a802eeec77b1?w=800&q=80', hoverText: 'Landing and product pages built for conversion. We create fast, SEO-friendly pages that showcase your product and drive sign-ups and demos with clear CTAs and trust elements.' },
-  { id: 'cms', title: 'CMS & Landing Pages', image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80', hoverText: 'Websites on WordPress or headless CMS that your team can update. We also build standalone landing pages for campaigns, events, and product launches with forms and analytics built in.' },
+  { id: 'corporate', title: 'Corporate Websites', image: websiteCorporateImage, hoverText: 'Professional corporate sites that represent your brand and convert visitors. We combine clear messaging, modern design, and performance so your company makes a strong first impression.' },
+  { id: 'saas', title: 'Product / SaaS Websites', image: websiteSaaSImage, hoverText: 'Landing and product pages built for conversion. We create fast, SEO-friendly pages that showcase your product and drive sign-ups and demos with clear CTAs and trust elements.' },
+  { id: 'cms', title: 'CMS & Landing Pages', image: websiteCMSImage, hoverText: 'Websites on WordPress or headless CMS that your team can update. We also build standalone landing pages for campaigns, events, and product launches with forms and analytics built in.' },
 ];
 
 const TYPE_ICONS = [
