@@ -66,7 +66,7 @@ export default function ServiceTechStack() {
             onClick={() => setActiveCategory(cat.id)}
             className={`px-5 py-2.5 rounded-lg font-semibold text-sm transition-all ${
               activeCategory === cat.id
-                ? 'bg-[#0859B2] text-[#51CFDF] shadow-lg'
+                ? 'bg-[#0859B2] text-white shadow-lg'
                 : 'bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white hover:bg-white/20'
             }`}
           >

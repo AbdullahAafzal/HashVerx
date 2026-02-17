@@ -69,12 +69,12 @@ export default function UIUXDesignLayout() {
               <div className="w-16 h-16 rounded-2xl bg-[#0859B2]/10 flex items-center justify-center mb-8">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4m0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Design services</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">Design services</h2>
               <ul className="space-y-5">
                 {designItems.map((item, i) => (
                   <li key={i} className="flex items-center gap-4">
                     <span className="w-3 h-3 rounded-full bg-[#51CFDF]" />
-                    <span className="font-medium text-gray-700 text-lg">{item}</span>
+                    <span className="font-medium text-white text-lg">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -96,9 +96,9 @@ export default function UIUXDesignLayout() {
           </div>
 
           <div className={`mt-20 text-center p-12 md:p-16 rounded-3xl bg-white/10 backdrop-blur-xl border-2 border-white/30 transition-all duration-700 delay-200 ${colsVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">See our work</h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto text-lg">{portfolio?.type === 'paragraph' ? portfolio.content : ''}</p>
-            <p className="text-gray-600 mb-8 text-lg">{contact?.type === 'paragraph' ? contact.content : ''}</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">See our work</h3>
+            <p className="text-white mb-6 max-w-2xl mx-auto text-lg">{portfolio?.type === 'paragraph' ? portfolio.content : ''}</p>
+            <p className="text-white mb-8 text-lg">{contact?.type === 'paragraph' ? contact.content : ''}</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#51CFDF] hover:bg-[#6dd9e8] text-white px-10 py-5 rounded-lg font-semibold text-base">
               Get in touch
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>

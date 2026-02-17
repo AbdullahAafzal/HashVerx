@@ -58,12 +58,7 @@ export default function ServiceHero({ title, subtitle, ctaText = 'Book a consult
           </>
         ) : (
           <>
-            <div
-              className="absolute inset-0"
-              style={{
-                background: 'linear-gradient(135deg, #0859B2 0%, #0a3d6b 40%, #0d2847 70%, #051a2e 100%)',
-              }}
-            />
+            <div className="absolute inset-0 bg-transparent" />
             <div
               className="absolute inset-0 opacity-30"
               style={{

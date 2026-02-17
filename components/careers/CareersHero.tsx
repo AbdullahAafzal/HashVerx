@@ -28,7 +28,7 @@ export default function CareersHero() {
   }, []);
 
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/40">
+    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-transparent">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Gradient Orbs */}
@@ -56,7 +56,7 @@ export default function CareersHero() {
             }`}
           >
             <span className="w-2 h-2 bg-[#51CFDF] rounded-full animate-pulse"></span>
-            <span className="text-[#0859B2] text-sm font-semibold">We're Hiring</span>
+            <span className="text-white text-sm font-semibold">We're Hiring</span>
           </div>
 
           {/* Main Heading */}
@@ -65,15 +65,15 @@ export default function CareersHero() {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <span className="text-[#0859B2]">Join Our</span>{' '}
-            <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent animate-gradient">
+            <span className="text-white">Join Our</span>{' '}
+            <span className="text-[#51CFDF]">
               Team
             </span>
           </h1>
           
           {/* Subheading */}
           <p
-            className={`text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl leading-relaxed transition-all duration-1000 delay-200 ${
+            className={`text-xl md:text-2xl text-white mb-4 max-w-3xl leading-relaxed transition-all duration-1000 delay-200 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -82,7 +82,7 @@ export default function CareersHero() {
           
           {/* Description */}
           <p
-            className={`text-base md:text-lg text-gray-500 mb-12 max-w-2xl leading-relaxed transition-all duration-1000 delay-400 ${
+            className={`text-base md:text-lg text-white mb-12 max-w-2xl leading-relaxed transition-all duration-1000 delay-400 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -95,23 +95,23 @@ export default function CareersHero() {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <div className="bg-white/60 backdrop-blur-sm border border-[#51CFDF]/20 rounded-2xl p-6 shadow-lg shadow-[#51CFDF]/5 hover:shadow-xl hover:shadow-[#51CFDF]/10 transition-all duration-300">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#0859B2] to-[#51CFDF] bg-clip-text text-transparent mb-2">
+            <div className="bg-white/10 backdrop-blur-xl border border-white/30 rounded-2xl p-6 shadow-lg shadow-[#51CFDF]/5 hover:shadow-xl hover:shadow-[#51CFDF]/10 transition-all duration-300">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                 50+
               </div>
-              <div className="text-sm text-gray-600 font-medium">Team Members</div>
+              <div className="text-sm text-white font-medium">Team Members</div>
             </div>
-            <div className="bg-white/60 backdrop-blur-sm border border-[#51CFDF]/20 rounded-2xl p-6 shadow-lg shadow-[#51CFDF]/5 hover:shadow-xl hover:shadow-[#51CFDF]/10 transition-all duration-300">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#0859B2] to-[#51CFDF] bg-clip-text text-transparent mb-2">
+            <div className="bg-white/10 backdrop-blur-xl border border-white/30 rounded-2xl p-6 shadow-lg shadow-[#51CFDF]/5 hover:shadow-xl hover:shadow-[#51CFDF]/10 transition-all duration-300">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                 15+
               </div>
-              <div className="text-sm text-gray-600 font-medium">Countries</div>
+              <div className="text-sm text-white font-medium">Countries</div>
             </div>
-            <div className="bg-white/60 backdrop-blur-sm border border-[#51CFDF]/20 rounded-2xl p-6 shadow-lg shadow-[#51CFDF]/5 hover:shadow-xl hover:shadow-[#51CFDF]/10 transition-all duration-300">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#0859B2] to-[#51CFDF] bg-clip-text text-transparent mb-2">
+            <div className="bg-white/10 backdrop-blur-xl border border-white/30 rounded-2xl p-6 shadow-lg shadow-[#51CFDF]/5 hover:shadow-xl hover:shadow-[#51CFDF]/10 transition-all duration-300">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                 100+
               </div>
-              <div className="text-sm text-gray-600 font-medium">Projects Delivered</div>
+              <div className="text-sm text-white font-medium">Projects Delivered</div>
             </div>
           </div>
         </div>

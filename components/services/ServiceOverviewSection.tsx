@@ -50,18 +50,18 @@ export default function ServiceOverviewSection({
             <h2 className="text-[#51CFDF] text-3xl md:text-4xl font-bold uppercase tracking-wider mb-5">
               Overview
             </h2>
-            <p className="text-lg md:text-xl text-gray-900 leading-relaxed mb-10">
+            <p className="text-lg md:text-xl text-white leading-relaxed mb-10">
               {intro}
             </p>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">{capabilitiesHeading}</h3>
+            <h3 className="text-2xl font-bold text-white mb-8">{capabilitiesHeading}</h3>
             <ul className="space-y-4">
               {capabilities.map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#51CFDF] mt-2.5 flex-shrink-0" />
                   <div>
-                    <span className="font-semibold text-gray-900">{item.title}</span>
+                    <span className="font-semibold text-white">{item.title}</span>
                     {item.description != null && item.description !== '' && (
-                      <>: <span className="text-gray-700">{item.description}</span></>
+                      <>: <span className="text-white">{item.description}</span></>
                     )}
                   </div>
                 </li>

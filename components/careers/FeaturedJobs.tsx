@@ -97,7 +97,7 @@ export default function FeaturedJobs() {
   }, []);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-blue-50/30 relative overflow-hidden">
+    <section className="py-24 bg-transparent relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#51CFDF] rounded-full blur-3xl"></div>
@@ -109,15 +109,15 @@ export default function FeaturedJobs() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#51CFDF]/10 to-[#0859B2]/10 border border-[#51CFDF]/30 rounded-full px-6 py-2 mb-6">
             <span className="w-2 h-2 bg-[#51CFDF] rounded-full animate-pulse"></span>
-            <span className="text-[#0859B2] text-sm font-semibold">Open Positions</span>
+            <span className="text-white text-sm font-semibold">Open Positions</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
-            <span className="text-[#0859B2]">Explore</span>{" "}
-            <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent">
+            <span className="text-white">Explore</span>{" "}
+            <span className="text-[#51CFDF]">
               Opportunities
             </span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-white max-w-2xl mx-auto">
             Join a team that's shaping the future of technology. Find your perfect role and grow with us.
           </p>
         </div>
@@ -128,7 +128,7 @@ export default function FeaturedJobs() {
             <div
               key={job.id}
               ref={(el: any) => (cardRefs.current[index] = el)}
-              className={`group relative bg-white rounded-2xl p-6 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl ${
+              className={`group relative bg-white/10 backdrop-blur-xl border border-white/30 rounded-2xl p-6 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl ${
                 visibleCards.has(index)
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
@@ -144,7 +144,7 @@ export default function FeaturedJobs() {
               {/* Department Badge */}
               {job.department && (
                 <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-[#51CFDF]/10 to-[#0859B2]/10 border border-[#51CFDF]/30 rounded-full mb-4">
-                  <span className="text-xs font-semibold text-[#0859B2]">{job.department}</span>
+                  <span className="text-xs font-semibold text-white">{job.department}</span>
                 </div>
               )}
 
@@ -154,16 +154,16 @@ export default function FeaturedJobs() {
               </h3>
 
               {/* Job Description */}
-              <p className="text-sm text-gray-600 mb-6 leading-relaxed line-clamp-3">
+              <p className="text-sm text-white mb-6 leading-relaxed line-clamp-3">
                 {job.description}
               </p>
 
               {/* Job Details */}
               <div className="flex flex-wrap gap-2 mb-6">
                 {/* Location Badge */}
-                <div className="inline-flex items-center space-x-1.5 bg-blue-50 border border-[#51CFDF]/30 rounded-lg px-3 py-1.5">
+                <div className="inline-flex items-center space-x-1.5 bg-white/20 border border-white/30 rounded-lg px-3 py-1.5">
                   <svg
-                    className="w-3.5 h-3.5 text-[#51CFDF]"
+                    className="w-3.5 h-3.5 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -181,14 +181,14 @@ export default function FeaturedJobs() {
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-                  <span className="text-[#0859B2] text-xs font-medium">
+                  <span className="text-white text-xs font-medium">
                     {job.location}
                   </span>
                 </div>
                 {/* Employment Type Badge */}
-                <div className="inline-flex items-center space-x-1.5 bg-cyan-50 border border-[#51CFDF]/30 rounded-lg px-3 py-1.5">
+                <div className="inline-flex items-center space-x-1.5 bg-white/20 border border-white/30 rounded-lg px-3 py-1.5">
                   <svg
-                    className="w-3.5 h-3.5 text-[#51CFDF]"
+                    className="w-3.5 h-3.5 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -200,7 +200,7 @@ export default function FeaturedJobs() {
                       d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  <span className="text-[#0859B2] text-xs font-medium">
+                  <span className="text-white text-xs font-medium">
                     {job.employmentType}
                   </span>
                 </div>
@@ -232,10 +232,10 @@ export default function FeaturedJobs() {
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-6">Don't see a role that fits? We're always looking for great talent.</p>
+          <p className="text-white mb-6">Don't see a role that fits? We're always looking for great talent.</p>
           <Link
             href="/contact"
-            className="inline-flex items-center space-x-2 text-[#0859B2] hover:text-[#51CFDF] font-semibold transition-colors duration-300 group"
+            className="inline-flex items-center space-x-2 text-white hover:text-[#51CFDF] font-semibold transition-colors duration-300 group"
           >
             <span>Get in Touch</span>
             <svg

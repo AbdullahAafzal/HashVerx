@@ -88,13 +88,13 @@ export default function ServiceSections({ sections }: ServiceSectionsProps) {
                   </div>
 
                   {section.type === 'overview' && (
-                    <p className="text-base md:text-lg text-gray-600 leading-relaxed pl-16 md:pl-0 -mt-2 md:mt-0">
+                    <p className="text-base md:text-lg text-white leading-relaxed pl-16 md:pl-0 -mt-2 md:mt-0">
                       {section.content}
                     </p>
                   )}
 
                   {section.type === 'paragraph' && (
-                    <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                    <p className="text-base md:text-lg text-white leading-relaxed">
                       {section.content}
                     </p>
                   )}
@@ -107,7 +107,7 @@ export default function ServiceSections({ sections }: ServiceSectionsProps) {
                           className="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-br from-[#51CFDF]/5 to-[#51CFDF]/10 border border-[#51CFDF]/20 hover:border-[#51CFDF]/50 hover:shadow-md hover:shadow-[#51CFDF]/10 transition-all duration-300"
                         >
                           <span className="w-2 h-2 rounded-full bg-[#51CFDF] flex-shrink-0 ring-4 ring-[#51CFDF]/20" />
-                          <span className="text-gray-700 font-medium">{item}</span>
+                          <span className="text-white font-medium">{item}</span>
                         </li>
                       ))}
                     </ul>

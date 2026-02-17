@@ -23,7 +23,7 @@ export default function ServiceTypesSection({ sectionTitle, items }: ServiceType
   return (
     <section className="py-28 md:py-36 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
           {sectionTitle}
         </h2>
         <div className="grid md:grid-cols-3 gap-8 lg:gap-10">

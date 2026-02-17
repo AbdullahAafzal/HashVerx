@@ -96,7 +96,7 @@ export default function CustomSoftwareLayout() {
                 <span className="w-14 h-14 rounded-xl bg-[#0859B2] text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
                   {i + 1}
                 </span>
-                <span className="font-semibold text-gray-800 text-lg">
+                <span className="font-semibold text-white text-lg">
                   {item}
                 </span>
               </div>
@@ -131,7 +131,7 @@ export default function CustomSoftwareLayout() {
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
                   Get started
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-lg mb-8">
+                <p className="text-white leading-relaxed text-lg mb-8">
                   {contact?.type === "paragraph" ? contact.content : ""}
                 </p>
               </div>

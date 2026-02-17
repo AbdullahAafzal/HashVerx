@@ -96,8 +96,8 @@ export default function OdooLayout() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">44K+ Applications</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white mb-3">44K+ Applications</h3>
+              <p className="text-white leading-relaxed">
                 Odoo has an app for almost everything. With 44,000+ community apps, it offers the world's largest business app marketplace.
               </p>
             </div>
@@ -109,8 +109,8 @@ export default function OdooLayout() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Modular in Nature</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white mb-3">Modular in Nature</h3>
+              <p className="text-white leading-relaxed">
                 Its modular design lets you implement parts of the solution or the entire system, paying only for the modules you need now, with the flexibility to scale later.
               </p>
             </div>
@@ -122,8 +122,8 @@ export default function OdooLayout() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Global Accounting Practice</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white mb-3">Global Accounting Practice</h3>
+              <p className="text-white leading-relaxed">
                 Supporting over 70 countries, Odoo ensures seamless global accounting by complying with regional tax laws, financial regulations, and reporting standards.
               </p>
             </div>
@@ -135,8 +135,8 @@ export default function OdooLayout() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Low-Cost Solution</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white mb-3">Low-Cost Solution</h3>
+              <p className="text-white leading-relaxed">
                 Odoo comes in two versions. The Community version is free for startups or companies on a tight budget. Enterprise Edition offers advanced features with affordable pricing.
               </p>
             </div>
@@ -148,8 +148,8 @@ export default function OdooLayout() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Python-Based Foundation</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white mb-3">Python-Based Foundation</h3>
+              <p className="text-white leading-relaxed">
                 Python's popularity means you'll find skilled developers easily compared to ERPs (like SAP, Microsoft Dynamics 365, etc.) that use proprietary languages, making development and maintenance more accessible.
               </p>
             </div>
@@ -191,7 +191,7 @@ export default function OdooLayout() {
           </div>
 
           <div className="mt-20 text-center p-12 md:p-16 rounded-3xl bg-white/10 backdrop-blur-xl border-2 border-white/30">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Ready to streamline with Odoo?</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">Ready to streamline with Odoo?</h3>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto text-lg">{book?.type === 'paragraph' ? book.content : ''}</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#51CFDF] hover:bg-[#6dd9e8] text-white px-10 py-5 rounded-lg font-semibold text-base">
               Schedule free consultation

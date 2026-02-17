@@ -44,7 +44,9 @@ export default function Header() {
   const isServicePage = pathname.startsWith("/services");
 
   return (
-    <header className={`${isServicePage ? 'fixed' : 'relative'} top-0 left-0 right-0 z-50 ${isServicePage ? 'backdrop-blur-none' : 'backdrop-blur-sm'}`}>
+    <header 
+      className={`relative top-0 left-0 right-0 z-50 ${isServicePage ? 'backdrop-blur-none' : 'backdrop-blur-sm'}`}
+    >
       <div
         className="absolute inset-0"
         style={{

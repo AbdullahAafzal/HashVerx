@@ -60,12 +60,12 @@ export default function ServiceOverview({
             <h2 className="text-[#51CFDF] text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4">
               {label}
             </h2>
-            <p className="text-base md:text-lg text-gray-900 leading-relaxed mb-8">
+            <p className="text-base md:text-lg text-white leading-relaxed mb-8">
               {intro}
             </p>
             {capabilities.length > 0 && (
               <>
-                <h3 className="text-xl font-bold text-gray-900 mb-6">{capabilitiesHeading}</h3>
+                <h3 className="text-xl font-bold text-white mb-6">{capabilitiesHeading}</h3>
                 <ul className="space-y-4">
                   {capabilities.map((item, i) => {
                     if (isCapabilityObj(item)) {
@@ -73,9 +73,9 @@ export default function ServiceOverview({
                         <li key={i} className="flex gap-3">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#51CFDF] mt-2.5 flex-shrink-0" />
                           <div>
-                            <span className="font-semibold text-gray-900">{item.title}</span>
+                            <span className="font-semibold text-white">{item.title}</span>
                             {item.description != null && item.description !== '' && (
-                              <>: <span className="text-gray-700">{item.description}</span></>
+                              <>: <span className="text-white">{item.description}</span></>
                             )}
                           </div>
                         </li>
@@ -84,7 +84,7 @@ export default function ServiceOverview({
                     return (
                       <li key={i} className="flex gap-3">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#51CFDF] mt-2.5 flex-shrink-0" />
-                        <span className="text-gray-700 font-medium">{item}</span>
+                        <span className="text-white font-medium">{item}</span>
                       </li>
                     );
                   })}

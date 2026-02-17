@@ -384,13 +384,13 @@ export default function TechStack() {
 
           {/* Right Side - Text Content */}
           <div className="order-1 lg:order-2">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
               Our Software Company Helps you Achieve{" "}
               <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent">
                 3X Growth
               </span>
             </h2>
-            <p className="text-base md:text-lg text-gray-400 mb-6 leading-relaxed">
+            <p className="text-base md:text-lg text-white mb-6 leading-relaxed">
               We help you become a truly{" "}
               <span className="underline decoration-[#51CFDF] underline-offset-4 text-[#51CFDF]">
                 data-driven organization
@@ -402,7 +402,7 @@ export default function TechStack() {
               drive smarter decisions and support the cultural change needed for
               modern analytics.
             </p>
-            <p className="text-base md:text-lg text-gray-400 leading-relaxed">
+            <p className="text-base md:text-lg text-white leading-relaxed">
               We design and implement{" "}
               <span className="underline decoration-[#51CFDF] underline-offset-4 text-[#51CFDF]">
                 smart data solutions

@@ -73,7 +73,7 @@ export default function AIAutomationLayout() {
                 style={{ transitionDelay: `${i * 60}ms` }}
               >
                 <span className="text-3xl mb-4 block">{CAP_ICONS[i % CAP_ICONS.length]}</span>
-                <h3 className="font-semibold text-gray-800 text-lg">{item}</h3>
+                <h3 className="font-semibold text-white text-lg">{item}</h3>
               </div>
             ))}
           </div>

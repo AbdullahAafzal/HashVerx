@@ -82,7 +82,7 @@ export default function WebsiteDesignLayout() {
                 <div className="w-16 h-16 rounded-xl bg-white/10 text-white flex items-center justify-center mb-6">
                   {TYPE_ICONS[i % TYPE_ICONS.length]}
                 </div>
-                <h3 className="font-semibold text-gray-800 text-lg">{item}</h3>
+                <h3 className="font-semibold text-white text-lg">{item}</h3>
               </div>
             ))}
           </div>

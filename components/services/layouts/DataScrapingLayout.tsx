@@ -69,7 +69,7 @@ export default function DataScrapingLayout() {
               <p className="text-[#51CFDF] text-sm font-semibold uppercase tracking-widest mb-6">01 · Sources</p>
               <ul className="space-y-3">
                 {sourceItems.map((item, i) => (
-                  <li key={i} className="text-gray-700 font-medium">→ {item}</li>
+                  <li key={i} className="text-white font-medium">→ {item}</li>
                 ))}
               </ul>
             </div>
@@ -82,7 +82,7 @@ export default function DataScrapingLayout() {
               <p className="text-[#51CFDF] text-sm font-semibold uppercase tracking-widest mb-6">02 · Deliverables</p>
               <ul className="space-y-3">
                 {deliverItems.map((item, i) => (
-                  <li key={i} className="text-gray-700 font-medium">→ {item}</li>
+                  <li key={i} className="text-white font-medium">→ {item}</li>
                 ))}
               </ul>
             </div>

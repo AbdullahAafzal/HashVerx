@@ -62,15 +62,15 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
           {/* Left Side - Text Content */}
           <div className="space-y-6 md:col-span-1 lg:col-span-2">
-            <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+            <p className="text-sm font-semibold text-white uppercase tracking-wider">
               Featured Insights
             </p>
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
               Stories of our transformations across{" "}
               <span className="text-[#51CFDF]">Services</span> and{" "}
               <span className="text-[#51CFDF]">Industries</span>
             </h3>
-            <p className="text-lg md:text-xl text-gray-600">
+            <p className="text-lg md:text-xl text-white">
               From Concept to Completion.
             </p>
             <Link
