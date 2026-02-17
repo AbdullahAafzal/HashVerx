@@ -33,7 +33,7 @@ export default function MobileAppTypes() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   return (
-    <section className="py-28 md:py-36 bg-gray-50">
+    <section className="py-28 md:py-36 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16">
           Mobile app development capabilities

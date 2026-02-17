@@ -29,7 +29,7 @@ export default function MaintenanceSupport() {
   }, []);
 
   return (
-    <section className="py-20 bg-white relative">
+    <section className="py-20 bg-transparent relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div ref={ref} className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Side - Content */}
@@ -40,7 +40,7 @@ export default function MaintenanceSupport() {
           >
             <div className="flex items-start space-x-4 mb-4">
               <div className="w-12 h-8 bg-gradient-to-br from-[#0859B2] to-[#51CFDF] rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-[#0859B2] font-bold text-sm">05</span>
+                <span className="text-white font-bold text-sm">05</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Maintenance & Support</h2>
             </div>

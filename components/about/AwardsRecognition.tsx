@@ -97,7 +97,7 @@ export default function AwardsRecognition() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-[#0859B2] mb-2">
+                  <h3 className="text-lg font-bold text-white mb-2">
                     {award.title}
                   </h3>
                   <p className="text-sm text-gray-400 leading-relaxed">

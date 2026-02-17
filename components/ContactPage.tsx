@@ -50,7 +50,7 @@ export default function ContactPage() {
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Left Side - Contact Form */}
           <div className="flex flex-col p-6 lg:p-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-[#0859B2] mb-2">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
               Contact us
             </h1>
             <p className="text-gray-600 mb-6 text-sm md:text-base">
@@ -209,7 +209,7 @@ export default function ContactPage() {
 
           {/* Right Side - What happens next */}
           <div className="bg-gray-50 rounded-2xl p-6 lg:p-8 h-fit">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0859B2] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               What happens next?
             </h2>
             

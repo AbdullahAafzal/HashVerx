@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 8, 89, 178;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
   --primary-blue: #0859B2;
@@ -24,10 +24,90 @@ body {
   scroll-behavior: smooth;
 }
 
+html {
+  background-image: url('/Artboard.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100%;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
   font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-image: url('/Artboard.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* Make all text white by default - override Tailwind text color classes */
+.text-\[#0859B2\],
+.text-gray-400,
+.text-gray-500,
+.text-gray-600,
+.text-gray-700,
+.text-gray-900,
+.text-black {
+  color: white !important;
+}
+
+/* Ensure headings are white or light blue - override dark blue */
+h1, h2, h3, h4, h5, h6 {
+  color: white !important;
+}
+
+/* Override dark blue headings specifically */
+h1.text-\[#0859B2\],
+h2.text-\[#0859B2\],
+h3.text-\[#0859B2\],
+h4.text-\[#0859B2\],
+h5.text-\[#0859B2\],
+h6.text-\[#0859B2\] {
+  color: white !important;
+}
+
+/* Paragraphs and text elements */
+p, span:not([class*="bg-"]):not([class*="text-"]), 
+div:not([class*="bg-"]):not([class*="text-"]), 
+li, label {
+  color: white !important;
+}
+
+/* Links inherit but can be overridden */
+a:not([class*="bg-"]) {
+  color: white !important;
+}
+
+/* Buttons can have their own colors but text should be white unless specified */
+button:not([class*="bg-"]) {
+  color: white !important;
+}
+
+/* Input placeholders should be lighter */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+  opacity: 1;
+}
+
+/* Ensure input and textarea text is white */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea {
+  color: white !important;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
 }
 
 @layer utilities {

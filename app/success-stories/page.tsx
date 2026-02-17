@@ -9,7 +9,7 @@ import SuccessStoriesCTA from '@/components/success-stories/SuccessStoriesCTA';
 
 export default function SuccessStoriesPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-transparent">
       <Header />
       <SuccessStoriesHero />
       <TrustedBy />

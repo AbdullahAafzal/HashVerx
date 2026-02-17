@@ -223,7 +223,7 @@ export default function IndustrySuccessStories() {
                   "0 4px 16px rgba(81, 207, 223, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)"
               }}
             >
-              <h3 className="text-lg font-bold text-[#0859B2] mb-3">
+              <h3 className="text-lg font-bold text-white mb-3">
                 {story.title}
               </h3>
               <p className="text-sm text-gray-400 leading-relaxed">

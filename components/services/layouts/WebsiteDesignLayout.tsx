@@ -69,17 +69,17 @@ export default function WebsiteDesignLayout() {
       />
       <ServiceTypesSection sectionTitle="Website Types We Build" items={TYPES_ITEMS} />
 
-      <section ref={cardsRef} className="py-28 md:py-36 bg-gray-50">
+      <section ref={cardsRef} className="py-28 md:py-36 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0859B2] mb-16">What we offer</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">What we offer</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {typeItems.map((item, i) => (
               <div
                 key={i}
-                className={`p-8 rounded-2xl bg-white border-2 border-[#51CFDF]/20 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/40 transition-all duration-300 ${cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+                className={`p-8 rounded-2xl bg-white/10 backdrop-blur-xl border-2 border-white/30 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/40 transition-all duration-300 ${cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <div className="w-16 h-16 rounded-xl bg-[#0859B2]/10 text-[#0859B2] flex items-center justify-center mb-6">
+                <div className="w-16 h-16 rounded-xl bg-white/10 text-white flex items-center justify-center mb-6">
                   {TYPE_ICONS[i % TYPE_ICONS.length]}
                 </div>
                 <h3 className="font-semibold text-gray-800 text-lg">{item}</h3>
@@ -97,10 +97,10 @@ export default function WebsiteDesignLayout() {
         </div>
       </section>
 
-      <section className="py-28 md:py-36 bg-white">
+      <section className="py-28 md:py-36 bg-transparent">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="p-12 md:p-16 rounded-3xl border-2 border-[#51CFDF]/30 bg-gray-50">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#0859B2] mb-6">SEO ready</h3>
+          <div className="p-12 md:p-16 rounded-3xl border-2 border-[#51CFDF]/30 bg-white/10 backdrop-blur-xl">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">SEO ready</h3>
             <p className="text-gray-600 leading-relaxed text-lg">{seo?.type === 'paragraph' ? seo.content : ''}</p>
           </div>
           <div className="mt-16 text-center">

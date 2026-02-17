@@ -11,7 +11,7 @@ import CTASection from '@/components/about/CTASection';
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-transparent">
       <Header />
       <AboutHero />
       <WhoWeAre />

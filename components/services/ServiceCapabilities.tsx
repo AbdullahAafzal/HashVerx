@@ -42,7 +42,7 @@ export default function ServiceCapabilities({
   }, []);
 
   return (
-    <section className="py-20 bg-white relative">
+    <section className="py-20 bg-transparent relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Our{" "}
@@ -83,7 +83,7 @@ export default function ServiceCapabilities({
                     />
                   </svg>
                 </div>
-                <p className="text-base text-[#0859B2] leading-relaxed">
+                <p className="text-base text-white leading-relaxed">
                   {item}
                 </p>
               </div>

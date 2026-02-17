@@ -45,7 +45,7 @@ export default function WhoWeAre() {
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
               }`}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0859B2] mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Who We Are
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">

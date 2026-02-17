@@ -15,13 +15,13 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex items-center justify-center overflow-hidden bg-white py-12 md:py-16">
+    <section className="relative flex items-center justify-center overflow-hidden bg-transparent py-12 md:py-16">
       {/* Video Container */}
       <div className="w-full flex items-center justify-center">
-        <div className="w-[70%] max-w-4xl aspect-video">
+        <div className="w-[70%] max-w-4xl aspect-video rounded-2xl overflow-hidden">
           <video
             ref={videoRef}
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain rounded-2xl"
             autoPlay
             loop
             muted
@@ -32,9 +32,6 @@ export default function Hero() {
           </video>
         </div>
       </div>
-
-      {/* Optional overlay for better text readability if needed */}
-      <div className="absolute inset-0 bg-white/5 pointer-events-none"></div>
     </section>
   );
 }

@@ -62,12 +62,12 @@ export default function UIUXDesignLayout() {
       />
       <ServiceTypesSection sectionTitle="Design & Video Services" items={TYPES_ITEMS} />
 
-      <section ref={colsRef} className="py-28 md:py-36 bg-gray-50">
+      <section ref={colsRef} className="py-28 md:py-36 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`grid md:grid-cols-2 gap-10 transition-all duration-700 ${colsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <div className="p-12 rounded-3xl bg-white border-2 border-[#51CFDF]/20 shadow-xl">
+            <div className="p-12 rounded-3xl bg-white/10 backdrop-blur-xl border-2 border-white/30 shadow-xl">
               <div className="w-16 h-16 rounded-2xl bg-[#0859B2]/10 flex items-center justify-center mb-8">
-                <svg className="w-10 h-10 text-[#0859B2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4m0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4m0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Design services</h2>
               <ul className="space-y-5">
@@ -95,7 +95,7 @@ export default function UIUXDesignLayout() {
             </div>
           </div>
 
-          <div className={`mt-20 text-center p-12 md:p-16 rounded-3xl bg-white border-2 border-[#51CFDF]/20 transition-all duration-700 delay-200 ${colsVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <div className={`mt-20 text-center p-12 md:p-16 rounded-3xl bg-white/10 backdrop-blur-xl border-2 border-white/30 transition-all duration-700 delay-200 ${colsVisible ? 'opacity-100' : 'opacity-0'}`}>
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">See our work</h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto text-lg">{portfolio?.type === 'paragraph' ? portfolio.content : ''}</p>
             <p className="text-gray-600 mb-8 text-lg">{contact?.type === 'paragraph' ? contact.content : ''}</p>

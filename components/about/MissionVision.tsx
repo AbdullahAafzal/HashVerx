@@ -81,7 +81,7 @@ export default function MissionVision() {
                 missionVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
               }`}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0859B2] mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Our Mission
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
@@ -111,7 +111,7 @@ export default function MissionVision() {
                 visionVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
               }`}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0859B2] mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Our Vision
               </h2>
               <p className="text-base md:text-lg text-gray-300 leading-relaxed">

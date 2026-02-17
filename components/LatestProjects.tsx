@@ -159,7 +159,7 @@ export default function LatestProjects() {
   }, []);
 
   return (
-    <section className="py-24 bg-white relative">
+    <section className="py-24 bg-transparent relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold text-center mb-12">
           Latest{" "}

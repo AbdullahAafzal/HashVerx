@@ -41,7 +41,7 @@ export default function ServiceHero({ title, subtitle, ctaText = 'Book a consult
       : title;
 
   return (
-    <section className="relative min-h-[85vh] flex items-end justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-end justify-center overflow-hidden">
       {/* Background: image or gradient */}
       <div className="absolute inset-0">
         {imageSrc ? (

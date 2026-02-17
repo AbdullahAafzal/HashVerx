@@ -51,7 +51,7 @@ export default function ServiceSections({ sections }: ServiceSectionsProps) {
   }, [sections]);
 
   return (
-    <section className="py-20 bg-gray-50 relative">
+    <section className="py-20 bg-transparent relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="space-y-16">
           {sections.map((section, index) => (
@@ -68,21 +68,21 @@ export default function ServiceSections({ sections }: ServiceSectionsProps) {
             >
               {section.id === 'tech-stack' ? (
                 <div
-                  className="rounded-2xl border border-[#51CFDF]/30 bg-gradient-to-b from-white to-[#51CFDF]/5 p-8 md:p-10 shadow-xl shadow-[#51CFDF]/5"
+                  className="rounded-2xl border border-white/30 bg-white/10 backdrop-blur-xl p-8 md:p-10 shadow-xl shadow-[#51CFDF]/5"
                   style={{ boxShadow: '0 4px 24px rgba(81, 207, 223, 0.12), 0 0 0 1px rgba(81, 207, 223, 0.08)' }}
                 >
                   <ServiceTechStack />
                 </div>
               ) : (
                 <div
-                  className="rounded-2xl border border-[#51CFDF]/25 bg-white p-6 md:p-8 lg:p-10 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/40 transition-all duration-300"
+                  className="rounded-2xl border border-white/30 bg-white/10 backdrop-blur-xl p-6 md:p-8 lg:p-10 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/40 transition-all duration-300"
                   style={{ boxShadow: '0 4px 20px rgba(8, 89, 178, 0.06), 0 0 0 1px rgba(81, 207, 223, 0.1)' }}
                 >
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0859B2] to-[#51CFDF] flex items-center justify-center flex-shrink-0 shadow-lg shadow-[#51CFDF]/20">
                       {sectionIcons[section.type]}
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#0859B2] pt-1">
+                    <h2 className="text-2xl md:text-3xl font-bold text-white pt-1">
                       {section.title}
                     </h2>
                   </div>

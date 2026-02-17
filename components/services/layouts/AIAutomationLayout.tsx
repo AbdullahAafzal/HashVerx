@@ -62,14 +62,14 @@ export default function AIAutomationLayout() {
       />
       <ServiceTypesSection sectionTitle="What We Automate & Deliver" items={TYPES_ITEMS} />
 
-      <section ref={bentoRef} className="py-28 md:py-36 bg-gray-50">
+      <section ref={bentoRef} className="py-28 md:py-36 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0859B2] mb-16">What we offer</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">What we offer</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {capItems.map((item, i) => (
               <div
                 key={i}
-                className={`p-8 rounded-2xl bg-white border-2 border-[#51CFDF]/20 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300 ${bentoVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+                className={`p-8 rounded-2xl bg-white/10 backdrop-blur-xl border-2 border-white/30 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300 ${bentoVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
                 style={{ transitionDelay: `${i * 60}ms` }}
               >
                 <span className="text-3xl mb-4 block">{CAP_ICONS[i % CAP_ICONS.length]}</span>
@@ -80,7 +80,7 @@ export default function AIAutomationLayout() {
         </div>
       </section>
 
-      <section className="py-28 md:py-36 bg-white">
+      <section className="py-28 md:py-36 bg-transparent">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-12 md:p-16 rounded-3xl bg-[#0859B2] text-white text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-6">Business benefits</h3>

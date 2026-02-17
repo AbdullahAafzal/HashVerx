@@ -62,10 +62,10 @@ export default function DataScrapingLayout() {
       />
       <ServiceTypesSection sectionTitle="Data Sources We Handle" items={TYPES_ITEMS} />
 
-      <section ref={pipelineRef} className="py-28 md:py-36 bg-gray-50">
+      <section ref={pipelineRef} className="py-28 md:py-36 bg-transparent">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`grid md:grid-cols-3 gap-10 items-center transition-all duration-700 ${pipelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <div className="p-8 md:p-10 rounded-2xl border-2 border-[#51CFDF]/30 bg-white">
+            <div className="p-8 md:p-10 rounded-2xl border-2 border-[#51CFDF]/30 bg-white/10 backdrop-blur-xl">
               <p className="text-[#51CFDF] text-sm font-semibold uppercase tracking-widest mb-6">01 · Sources</p>
               <ul className="space-y-3">
                 {sourceItems.map((item, i) => (
@@ -74,11 +74,11 @@ export default function DataScrapingLayout() {
               </ul>
             </div>
             <div className="flex justify-center">
-              <div className="w-16 h-16 rounded-full border-2 border-[#0859B2] flex items-center justify-center text-[#0859B2]">
+              <div className="w-16 h-16 rounded-full border-2 border-white/30 flex items-center justify-center text-white">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
               </div>
             </div>
-            <div className="p-8 md:p-10 rounded-2xl border-2 border-[#51CFDF]/30 bg-white">
+            <div className="p-8 md:p-10 rounded-2xl border-2 border-[#51CFDF]/30 bg-white/10 backdrop-blur-xl">
               <p className="text-[#51CFDF] text-sm font-semibold uppercase tracking-widest mb-6">02 · Deliverables</p>
               <ul className="space-y-3">
                 {deliverItems.map((item, i) => (
@@ -88,8 +88,8 @@ export default function DataScrapingLayout() {
             </div>
           </div>
 
-          <div className={`mt-20 p-10 md:p-12 rounded-2xl border-2 border-[#51CFDF]/20 bg-white transition-all duration-700 delay-200 ${pipelineVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <h3 className="text-[#0859B2] text-lg font-bold uppercase tracking-widest mb-4">Automation</h3>
+          <div className={`mt-20 p-10 md:p-12 rounded-2xl border-2 border-[#51CFDF]/20 bg-white/10 backdrop-blur-xl transition-all duration-700 delay-200 ${pipelineVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <h3 className="text-white text-lg font-bold uppercase tracking-widest mb-4">Automation</h3>
             <p className="text-gray-600 leading-relaxed text-lg">{automation?.type === 'paragraph' ? automation.content : ''}</p>
           </div>
 

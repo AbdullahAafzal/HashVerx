@@ -47,10 +47,10 @@ const industries = [
 
 export default function IndustryExpertise() {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-white">
+    <section className="py-20 md:py-28 relative overflow-hidden bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16 md:mb-20">
-          <span className="text-[#0859B2]">Where We Exceed </span>
+          <span className="text-white">Where We Exceed </span>
           <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent">
             Customers' Expectations
           </span>
@@ -197,7 +197,7 @@ export default function IndustryExpertise() {
                     isEven ? "md:order-2" : "md:order-1"
                   } flex flex-col justify-center`}
                 >
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0859B2] mb-6">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                     {industry.title}
                   </h3>
                   <p className="text-gray-700 text-base md:text-lg leading-relaxed">

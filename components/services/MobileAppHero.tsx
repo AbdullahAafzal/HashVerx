@@ -23,7 +23,7 @@ export default function MobileAppHero() {
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] flex items-end justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-end justify-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src={mainImage}

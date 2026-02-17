@@ -69,28 +69,28 @@ export default function OdooLayout() {
       <ServiceTypesSection sectionTitle="Our Odoo Services" items={TYPES_ITEMS} />
 
       {/* What Makes Odoo an Attractive Choice Section */}
-      <section className="py-28 md:py-36 bg-white">
+      <section className="py-28 md:py-36 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0859B2] mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
             What Makes Odoo an Attractive Choice
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Open Source ERP */}
-            <div className="p-8 rounded-2xl bg-white border-2 border-[#51CFDF]/20 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300">
+            <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-xl border-2 border-white/30 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300">
               <div className="w-12 h-12 text-[#51CFDF] mb-4">
                 <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                   <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Open Source ERP</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-white mb-3">Open Source ERP</h3>
+              <p className="text-white leading-relaxed">
                 Being an open-source system means you can access the source code and customize the software the way you want to fit your specific workflows.
               </p>
             </div>
 
             {/* 44K+ Applications */}
-            <div className="p-8 rounded-2xl bg-white border-2 border-[#51CFDF]/20 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300">
+            <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-xl border-2 border-white/30 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300">
               <div className="w-12 h-12 text-[#51CFDF] mb-4">
                 <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -103,7 +103,7 @@ export default function OdooLayout() {
             </div>
 
             {/* Modular in Nature */}
-            <div className="p-8 rounded-2xl bg-white border-2 border-[#51CFDF]/20 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300">
+            <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-xl border-2 border-white/30 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300">
               <div className="w-12 h-12 text-[#51CFDF] mb-4">
                 <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
@@ -116,7 +116,7 @@ export default function OdooLayout() {
             </div>
 
             {/* Global Accounting Practice */}
-            <div className="p-8 rounded-2xl bg-white border-2 border-[#51CFDF]/20 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300">
+            <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-xl border-2 border-white/30 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300">
               <div className="w-12 h-12 text-[#51CFDF] mb-4">
                 <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -129,7 +129,7 @@ export default function OdooLayout() {
             </div>
 
             {/* Low-Cost Solution */}
-            <div className="p-8 rounded-2xl bg-white border-2 border-[#51CFDF]/20 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300">
+            <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-xl border-2 border-white/30 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300">
               <div className="w-12 h-12 text-[#51CFDF] mb-4">
                 <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -142,7 +142,7 @@ export default function OdooLayout() {
             </div>
 
             {/* Python-Based Foundation */}
-            <div className="p-8 rounded-2xl bg-white border-2 border-[#51CFDF]/20 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300">
+            <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-xl border-2 border-white/30 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300">
               <div className="w-12 h-12 text-[#51CFDF] mb-4">
                 <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -157,40 +157,40 @@ export default function OdooLayout() {
         </div>
       </section>
 
-      <section ref={cardsRef} className="py-28 md:py-36 bg-gray-50">
+      <section ref={cardsRef} className="py-28 md:py-36 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0859B2] mb-16">What we offer</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">What we offer</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {serviceItems.map((item, i) => (
               <div
                 key={i}
-                className={`p-8 rounded-2xl bg-white border-2 border-[#51CFDF]/20 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300 flex flex-col items-center text-center ${cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+                className={`p-8 rounded-2xl bg-white/10 backdrop-blur-xl border-2 border-white/30 shadow-lg hover:shadow-xl hover:border-[#51CFDF]/50 transition-all duration-300 flex flex-col items-center text-center ${cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <div className="w-16 h-16 rounded-xl bg-[#0859B2]/10 text-[#0859B2] flex items-center justify-center mb-6">
+                <div className="w-16 h-16 rounded-xl bg-white/10 text-white flex items-center justify-center mb-6">
                   {MODULE_ICONS[i % MODULE_ICONS.length]}
                 </div>
-                <h3 className="font-semibold text-gray-900 text-lg">{item}</h3>
+                <h3 className="font-semibold text-white text-lg">{item}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-28 md:py-36 bg-white">
+      <section className="py-28 md:py-36 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-10">
             <div className="p-10 md:p-14 rounded-3xl bg-[#0859B2] text-white">
               <h3 className="text-2xl md:text-3xl font-bold mb-6">Industry solutions</h3>
               <p className="text-white/90 leading-relaxed text-lg">{industry?.type === 'paragraph' ? industry.content : ''}</p>
             </div>
-            <div className="p-10 md:p-14 rounded-3xl border-2 border-[#51CFDF]/30 bg-gray-50">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#0859B2] mb-6">Support & migration</h3>
+            <div className="p-10 md:p-14 rounded-3xl border-2 border-[#51CFDF]/30 bg-white/10 backdrop-blur-xl">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">Support & migration</h3>
               <p className="text-gray-600 leading-relaxed text-lg">{support?.type === 'paragraph' ? support.content : ''}</p>
             </div>
           </div>
 
-          <div className="mt-20 text-center p-12 md:p-16 rounded-3xl bg-gray-50 border-2 border-[#51CFDF]/20">
+          <div className="mt-20 text-center p-12 md:p-16 rounded-3xl bg-white/10 backdrop-blur-xl border-2 border-white/30">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Ready to streamline with Odoo?</h3>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto text-lg">{book?.type === 'paragraph' ? book.content : ''}</p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-[#51CFDF] hover:bg-[#6dd9e8] text-white px-10 py-5 rounded-lg font-semibold text-base">

@@ -39,7 +39,7 @@ export default function ServiceOverviewSection({
   }, []);
 
   return (
-    <section className="py-28 md:py-36 bg-white">
+    <section className="py-28 md:py-36 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div ref={ref} className="grid md:grid-cols-12 gap-14 lg:gap-20 items-center">
           <div

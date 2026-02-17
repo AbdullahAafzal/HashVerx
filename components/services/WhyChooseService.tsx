@@ -33,7 +33,7 @@ export default function WhyChooseService({ items }: WhyChooseServiceProps) {
   }, []);
 
   return (
-    <section className="py-20 bg-white relative">
+    <section className="py-20 bg-transparent relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div ref={ref} className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Side - Image */}
@@ -64,9 +64,9 @@ export default function WhyChooseService({ items }: WhyChooseServiceProps) {
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0859B2] mb-8 text-right">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-right">
               Why Choose{' '}
-              <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent">
+              <span className="text-[#51CFDF]">
                 HashVerx?
               </span>
             </h2>
@@ -80,7 +80,7 @@ export default function WhyChooseService({ items }: WhyChooseServiceProps) {
                     transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
                   }}
                 >
-                  <p className="text-base md:text-lg text-[#0859B2] leading-relaxed text-right">{item}</p>
+                  <p className="text-base md:text-lg text-white leading-relaxed text-right">{item}</p>
                   <div className="w-1.5 h-1.5 bg-[#51CFDF] rounded-full flex-shrink-0 mt-2.5"></div>
                 </div>
               ))}

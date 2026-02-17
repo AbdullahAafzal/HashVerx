@@ -5,7 +5,7 @@ import FeaturedJobs from '@/components/careers/FeaturedJobs';
 
 export default function CareersPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-transparent">
       <Header />
       <CareersHero />
       <FeaturedJobs />

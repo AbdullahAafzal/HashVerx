@@ -79,7 +79,7 @@ export default function CustomSoftwareLayout() {
       />
       <ServiceTypesSection sectionTitle="What We Build" items={TYPES_ITEMS} />
 
-      <section ref={sectionRef} className="py-28 md:py-36 bg-gray-50">
+      <section ref={sectionRef} className="py-28 md:py-36 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className={`grid grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-700 ${
@@ -91,7 +91,7 @@ export default function CustomSoftwareLayout() {
             {buildItems.map((item, i) => (
               <div
                 key={i}
-                className="p-6 md:p-8 rounded-2xl border-2 border-[#0859B2]/10 bg-white hover:border-[#51CFDF]/40 transition-colors flex items-center gap-4"
+                className="p-6 md:p-8 rounded-2xl border-2 border-white/30 bg-white/10 backdrop-blur-xl hover:border-[#51CFDF]/40 transition-colors flex items-center gap-4"
               >
                 <span className="w-14 h-14 rounded-xl bg-[#0859B2] text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
                   {i + 1}
@@ -104,7 +104,7 @@ export default function CustomSoftwareLayout() {
           </div>
 
           <div
-            className={`mt-20 rounded-3xl border-2 border-[#51CFDF]/25 bg-white p-10 md:p-14 shadow-lg transition-all duration-700 delay-100 ${
+            className={`mt-20 rounded-3xl border-2 border-[#51CFDF]/25 bg-white/10 backdrop-blur-xl p-10 md:p-14 shadow-lg transition-all duration-700 delay-100 ${
               sectionVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-6"
@@ -126,9 +126,9 @@ export default function CustomSoftwareLayout() {
                 {whyUs?.type === "paragraph" ? whyUs.content : ""}
               </p>
             </div>
-            <div className="p-10 md:p-12 rounded-3xl border-2 border-[#51CFDF]/30 bg-white flex flex-col justify-between">
+            <div className="p-10 md:p-12 rounded-3xl border-2 border-[#51CFDF]/30 bg-white/10 backdrop-blur-xl flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-[#0859B2] mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
                   Get started
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg mb-8">

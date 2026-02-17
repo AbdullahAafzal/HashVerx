@@ -259,7 +259,7 @@ export default function TechStack() {
   const duplicatedLanguages3 = [...column3Languages, ...column3Languages, ...column3Languages, ...column3Languages];
 
   return (
-    <section className="py-16 bg-white relative">
+    <section className="py-16 bg-transparent relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Side - Sliding Columns */}
@@ -392,11 +392,11 @@ export default function TechStack() {
             </h2>
             <p className="text-base md:text-lg text-gray-400 mb-6 leading-relaxed">
               We help you become a truly{" "}
-              <span className="underline decoration-[#51CFDF] underline-offset-4 text-[#0859B2]">
+              <span className="underline decoration-[#51CFDF] underline-offset-4 text-[#51CFDF]">
                 data-driven organization
               </span>
               . Our{" "}
-              <span className="underline decoration-[#51CFDF] underline-offset-4 text-[#0859B2]">
+              <span className="underline decoration-[#51CFDF] underline-offset-4 text-[#51CFDF]">
                 AI-powered solutions
               </span>{" "}
               drive smarter decisions and support the cultural change needed for
@@ -404,7 +404,7 @@ export default function TechStack() {
             </p>
             <p className="text-base md:text-lg text-gray-400 leading-relaxed">
               We design and implement{" "}
-              <span className="underline decoration-[#51CFDF] underline-offset-4 text-[#0859B2]">
+              <span className="underline decoration-[#51CFDF] underline-offset-4 text-[#51CFDF]">
                 smart data solutions
               </span>{" "}
               that drive smarter decision-making while supporting the cultural

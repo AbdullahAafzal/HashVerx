@@ -149,7 +149,7 @@ export default function FeaturedJobs() {
               )}
 
               {/* Job Title */}
-              <h3 className="text-xl md:text-2xl font-bold text-[#0859B2] mb-3 group-hover:text-[#51CFDF] transition-colors duration-300">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-[#51CFDF] transition-colors duration-300">
                 {job.title}
               </h3>
 

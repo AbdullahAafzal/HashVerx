@@ -49,7 +49,7 @@ export default function ServiceOverview({
   const imageAlt = typeof image === 'object' && image?.alt ? image.alt : 'Service overview';
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div ref={ref} className="grid md:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div

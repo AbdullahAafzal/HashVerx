@@ -40,12 +40,15 @@ export default function Header() {
     return pathname.startsWith(path);
   };
 
+  // Check if we're on a service/expertise page
+  const isServicePage = pathname.startsWith("/services");
+
   return (
-    <header className="relative z-50 backdrop-blur-2xl">
+    <header className={`${isServicePage ? 'fixed' : 'relative'} top-0 left-0 right-0 z-50 ${isServicePage ? 'backdrop-blur-none' : 'backdrop-blur-sm'}`}>
       <div
         className="absolute inset-0"
         style={{
-          background: "rgba(255, 255, 255, 0.95)"
+          background: isServicePage ? "transparent" : "rgba(255, 255, 255, 0.05)"
         }}
       ></div>
       <nav className="relative container mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +62,7 @@ export default function Header() {
               height={100}
               className="object-contain"
             />
-            {/* <span className="text-[#0859B2] text-xl font-bold">HashVerx</span> */}
+            {/* <span className="text-white text-xl font-bold">HashVerx</span> */}
           </Link>
 
           {/* Navigation Links */}
@@ -68,8 +71,8 @@ export default function Header() {
               href="/"
               className={`font-semibold text-base transition-colors ${
                 isActive("/")
-                  ? "text-[#51CFDF]"
-                  : "text-[#0859B2] hover:text-[#51CFDF]"
+                  ? "text-white"
+                  : "text-white hover:text-[#51CFDF]"
               }`}
             >
               Home
@@ -82,8 +85,8 @@ export default function Header() {
               <button
                 className={`font-semibold text-base transition-colors flex items-center space-x-1 ${
                   isServicesOpen || isActive("/services")
-                    ? "text-[#51CFDF]"
-                    : "text-[#0859B2] hover:text-[#51CFDF]"
+                    ? "text-white"
+                    : "text-white hover:text-[#51CFDF]"
                 }`}
               >
                 <span>Expertise</span>
@@ -103,17 +106,17 @@ export default function Header() {
               </button>
               {isServicesOpen && (
                 <div
-                  className="absolute top-full left-0 mt-2 w-72 bg-white/95 backdrop-blur-xl border border-[#51CFDF]/30 rounded-lg shadow-2xl py-3 transition-opacity duration-100"
+                  className="absolute top-full left-0 mt-2 w-72 bg-black/80 backdrop-blur-xl border border-white/30 rounded-lg shadow-2xl py-3 transition-opacity duration-100"
                   style={{
                     boxShadow:
-                      "0 8px 32px rgba(81, 207, 223, 0.1), 0 0 0 1px rgba(81, 207, 223, 0.2)"
+                      "0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.2)"
                   }}
                 >
                   {servicesList.map((service, index) => (
                     <Link
                       key={index}
                       href={`/services/${service.slug}`}
-                      className="block px-4 py-2.5 text-[#0859B2] text-sm hover:bg-[#51CFDF]/10 hover:text-[#51CFDF] transition-colors"
+                      className="block px-4 py-2.5 text-white text-sm hover:bg-white/10 hover:text-[#51CFDF] transition-colors"
                     >
                       {service.name}
                     </Link>
@@ -126,7 +129,7 @@ export default function Header() {
               className={`font-semibold text-sm transition-colors ${
                 isActive("/success-stories")
                   ? "text-[#51CFDF]"
-                  : "text-[#0859B2] hover:text-[#51CFDF]"
+                  : "text-white hover:text-[#51CFDF]"
               }`}
             >
               Case Studies
@@ -135,8 +138,8 @@ export default function Header() {
               href="/careers"
               className={`font-semibold text-base transition-colors ${
                 isActive("/careers")
-                  ? "text-[#51CFDF]"
-                  : "text-[#0859B2] hover:text-[#51CFDF]"
+                  ? "text-white"
+                  : "text-white hover:text-[#51CFDF]"
               }`}
             >
               Join Our Team

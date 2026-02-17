@@ -33,7 +33,7 @@ export default function ServiceIntro({ content }: ServiceIntroProps) {
   }, []);
 
   return (
-    <section className="py-20 bg-white relative">
+    <section className="py-20 bg-transparent relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div ref={ref} className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Side - Text */}
@@ -42,7 +42,7 @@ export default function ServiceIntro({ content }: ServiceIntroProps) {
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0859B2] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Intro
             </h2>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">

@@ -46,7 +46,7 @@ export default function WhyChooseUs() {
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0859B2] mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Why Choose{' '}
               <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent">
                 HashVerx?
@@ -63,7 +63,7 @@ export default function WhyChooseUs() {
                   }}
                 >
                   <div className="w-1.5 h-1.5 bg-[#51CFDF] rounded-full flex-shrink-0 mt-2.5"></div>
-                  <p className="text-base md:text-lg text-[#0859B2] leading-relaxed">{reason}</p>
+                  <p className="text-base md:text-lg text-white leading-relaxed">{reason}</p>
                 </div>
               ))}
             </div>

@@ -29,7 +29,7 @@ export default function ServiceHeroSection({ image, imageAlt, label, title, ctaT
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] flex items-end justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-end justify-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src={image}

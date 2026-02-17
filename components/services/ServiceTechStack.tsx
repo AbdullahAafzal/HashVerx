@@ -55,7 +55,7 @@ export default function ServiceTechStack() {
 
   return (
     <div className="w-full">
-      <h2 className="text-2xl md:text-3xl font-bold text-[#0859B2] text-center mb-8">
+      <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
         Top Technologies That We Utilize
       </h2>
       <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -67,7 +67,7 @@ export default function ServiceTechStack() {
             className={`px-5 py-2.5 rounded-lg font-semibold text-sm transition-all ${
               activeCategory === cat.id
                 ? 'bg-[#0859B2] text-[#51CFDF] shadow-lg'
-                : 'bg-white border-2 border-[#0859B2] text-[#0859B2] hover:bg-[#0859B2]/5'
+                : 'bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white hover:bg-white/20'
             }`}
           >
             {cat.label}
@@ -80,7 +80,7 @@ export default function ServiceTechStack() {
           return (
             <div
               key={tech}
-              className="bg-white border border-[#51CFDF]/40 rounded-xl p-4 flex flex-col items-center justify-center gap-2 hover:border-[#51CFDF] hover:shadow-lg hover:shadow-[#51CFDF]/20 transition-all duration-300"
+              className="bg-white/10 backdrop-blur-xl border border-white/30 rounded-xl p-4 flex flex-col items-center justify-center gap-2 hover:border-[#51CFDF] hover:shadow-lg hover:shadow-[#51CFDF]/20 transition-all duration-300"
               style={{ boxShadow: '0 2px 8px rgba(81, 207, 223, 0.08)' }}
             >
               {img && (
@@ -88,7 +88,7 @@ export default function ServiceTechStack() {
                   <Image src={img.src} alt={tech} fill className="object-contain" sizes="56px" />
                 </div>
               )}
-              <span className="text-sm font-medium text-[#0859B2]">{img?.name ?? tech}</span>
+              <span className="text-sm font-medium text-white">{img?.name ?? tech}</span>
             </div>
           );
         })}

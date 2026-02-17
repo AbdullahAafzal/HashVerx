@@ -42,10 +42,10 @@ export default function ServiceFAQs({ faqs = defaultFaqs }: ServiceFAQsProps) {
   };
 
   return (
-    <section className="py-20 bg-white relative">
+    <section className="py-20 bg-transparent relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent">
+          <span className="text-white">
             FAQs
           </span>
         </h2>
@@ -54,7 +54,7 @@ export default function ServiceFAQs({ faqs = defaultFaqs }: ServiceFAQsProps) {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white/60 backdrop-blur-xl border border-[#51CFDF]/30 rounded-xl overflow-hidden transition-all duration-300 hover:border-[#51CFDF]/70"
+              className="bg-white/10 backdrop-blur-xl border border-white/30 rounded-xl overflow-hidden transition-all duration-300 hover:border-[#51CFDF]/70"
               style={{
                 boxShadow: '0 4px 16px rgba(81, 207, 223, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
               }}
@@ -65,14 +65,14 @@ export default function ServiceFAQs({ faqs = defaultFaqs }: ServiceFAQsProps) {
               >
                 <span
                   className={`text-lg font-semibold pr-4 transition-colors ${
-                    openIndex === index ? 'text-gray-900' : 'text-gray-500'
+                    openIndex === index ? 'text-white' : 'text-white'
                   }`}
                 >
                   {faq.question}
                 </span>
                 <div className="flex-shrink-0">
                   <svg
-                    className={`w-6 h-6 text-[#51CFDF] transition-transform duration-300 ${
+                    className={`w-6 h-6 text-white transition-transform duration-300 ${
                       openIndex === index ? 'rotate-45' : ''
                     }`}
                     fill="none"
@@ -86,7 +86,7 @@ export default function ServiceFAQs({ faqs = defaultFaqs }: ServiceFAQsProps) {
               {openIndex === index && (
                 <div className="px-6 pb-4">
                   {faq.answer.includes('•') ? (
-                    <div className="text-base text-gray-900 leading-relaxed">
+                    <div className="text-base text-white leading-relaxed">
                       {faq.answer.split('\n').map((line, lineIndex) => {
                         const trimmedLine = line.trim();
                         if (trimmedLine.startsWith('•')) {
@@ -104,7 +104,7 @@ export default function ServiceFAQs({ faqs = defaultFaqs }: ServiceFAQsProps) {
                       })}
                     </div>
                   ) : (
-                    <p className="text-base text-gray-900 leading-relaxed">{faq.answer}</p>
+                    <p className="text-base text-white leading-relaxed">{faq.answer}</p>
                   )}
                 </div>
               )}

@@ -140,7 +140,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     getOverviewAndRestSections(service.sections);
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-transparent">
       <Header />
       {isMobileApp ? (
         <>

@@ -53,7 +53,7 @@ export default function WhyClientsSucceed() {
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0859B2] mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Why Clients Succeed with{' '}
               <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent">
                 HashVerx?
@@ -71,7 +71,7 @@ export default function WhyClientsSucceed() {
                 >
                   <div className="w-1.5 h-1.5 bg-[#51CFDF] rounded-full flex-shrink-0 mt-2.5"></div>
                   <div>
-                    <h3 className="text-lg font-bold text-[#0859B2] mb-2">{reason.title}</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">{reason.title}</h3>
                     <p className="text-base text-gray-300 leading-relaxed">{reason.description}</p>
                   </div>
                 </div>
