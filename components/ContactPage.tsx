@@ -45,7 +45,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <section className="py-6 md:py-8 bg-white min-h-[calc(100vh-80px)] flex items-center">
+    <section className="py-6 md:py-8 bg-transparent min-h-[calc(100vh-80px)] flex items-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Left Side - Contact Form */}
@@ -53,7 +53,7 @@ export default function ContactPage() {
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
               Contact us
             </h1>
-            <p className="text-gray-600 mb-6 text-sm md:text-base">
+            <p className="text-white/80 mb-6 text-sm md:text-base">
               Fill out the form below and we'll get back to you once we've processed your request.
             </p>
 
@@ -63,7 +63,7 @@ export default function ContactPage() {
                 {/* Name */}
                 <div>
                   <div className="flex items-center gap-1 mb-1">
-                    <label htmlFor="name" className="text-sm font-semibold text-gray-700">
+                    <label htmlFor="name" className="text-sm font-semibold text-white/90">
                       Name
                     </label>
                     <span className="text-red-500 text-sm">*</span>
@@ -75,7 +75,7 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full border-b-2 border-gray-300 focus:border-[#51CFDF] outline-none py-1.5 text-gray-900 placeholder-gray-400 transition-colors bg-transparent"
+                    className="w-full border-b-2 border-white/30 focus:border-[#51CFDF] outline-none py-1.5 text-white placeholder-white/50 transition-colors bg-transparent"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                 {/* Company */}
                 <div>
                   <div className="flex items-center gap-1 mb-1">
-                    <label htmlFor="company" className="text-sm font-semibold text-gray-700">
+                    <label htmlFor="company" className="text-sm font-semibold text-white/90">
                       Company
                     </label>
                     <span className="text-red-500 text-sm">*</span>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                     value={formData.company}
                     onChange={handleChange}
                     required
-                    className="w-full border-b-2 border-gray-300 focus:border-[#51CFDF] outline-none py-1.5 text-gray-900 placeholder-gray-400 transition-colors bg-transparent"
+                    className="w-full border-b-2 border-white/30 focus:border-[#51CFDF] outline-none py-1.5 text-white placeholder-white/50 transition-colors bg-transparent"
                     placeholder="Enter company name"
                   />
                 </div>
@@ -106,7 +106,7 @@ export default function ContactPage() {
                 {/* Corporate email */}
                 <div>
                   <div className="flex items-center gap-1 mb-1">
-                    <label htmlFor="email" className="text-sm font-semibold text-gray-700">
+                    <label htmlFor="email" className="text-sm font-semibold text-white/90">
                       Corporate email
                     </label>
                     <span className="text-red-500 text-sm">*</span>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full border-b-2 border-gray-300 focus:border-[#51CFDF] outline-none py-1.5 text-gray-900 placeholder-gray-400 transition-colors bg-transparent"
+                    className="w-full border-b-2 border-white/30 focus:border-[#51CFDF] outline-none py-1.5 text-white placeholder-white/50 transition-colors bg-transparent"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -126,7 +126,7 @@ export default function ContactPage() {
                 {/* Phone */}
                 <div>
                   <div className="flex items-center gap-1 mb-1">
-                    <label htmlFor="phone" className="text-sm font-semibold text-gray-700">
+                    <label htmlFor="phone" className="text-sm font-semibold text-white/90">
                       Phone
                     </label>
                     <span className="text-red-500 text-sm">*</span>
@@ -138,7 +138,7 @@ export default function ContactPage() {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full border-b-2 border-gray-300 focus:border-[#51CFDF] outline-none py-1.5 text-gray-900 placeholder-gray-400 transition-colors bg-transparent"
+                    className="w-full border-b-2 border-white/30 focus:border-[#51CFDF] outline-none py-1.5 text-white placeholder-white/50 transition-colors bg-transparent"
                     placeholder="+1 (555) 000-0000"
                   />
                 </div>
@@ -146,7 +146,7 @@ export default function ContactPage() {
 
               {/* Project budget */}
               <div>
-                <label htmlFor="budget" className="text-sm font-semibold text-gray-700 mb-1 block">
+                <label htmlFor="budget" className="text-sm font-semibold text-white/90 mb-1 block">
                   Project budget
                 </label>
                 <input
@@ -155,7 +155,7 @@ export default function ContactPage() {
                   name="budget"
                   value={formData.budget}
                   onChange={handleChange}
-                  className="w-full border-b-2 border-gray-300 focus:border-[#51CFDF] outline-none py-1.5 text-gray-900 placeholder-gray-400 transition-colors bg-transparent"
+                  className="w-full border-b-2 border-white/30 focus:border-[#51CFDF] outline-none py-1.5 text-white placeholder-white/50 transition-colors bg-transparent"
                   placeholder="Enter project budget"
                 />
               </div>
@@ -163,7 +163,7 @@ export default function ContactPage() {
               {/* Describe your needs */}
               <div>
                 <div className="flex items-center gap-1 mb-1">
-                  <label htmlFor="message" className="text-sm font-semibold text-gray-700">
+                  <label htmlFor="message" className="text-sm font-semibold text-white/90">
                     Describe your needs in detail
                   </label>
                   <span className="text-red-500 text-sm">*</span>
@@ -175,13 +175,13 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   rows={3}
-                  className="w-full border-b-2 border-gray-300 focus:border-[#51CFDF] outline-none py-1.5 text-gray-900 placeholder-gray-400 transition-colors resize-none bg-transparent"
+                  className="w-full border-b-2 border-white/30 focus:border-[#51CFDF] outline-none py-1.5 text-white placeholder-white/50 transition-colors resize-none bg-transparent"
                   placeholder="Tell us about your project requirements..."
                 />
               </div>
 
               {/* Consent Text */}
-              <p className="text-xs text-gray-500 leading-relaxed mt-3">
+              <p className="text-xs text-white/70 leading-relaxed mt-3">
                 By clicking Send, you consent to HashVerx processing your personal data per our{' '}
                 <a href="/privacy-policy" className="text-[#0859B2] hover:text-[#51CFDF] underline">
                   Privacy Policy
@@ -198,7 +198,7 @@ export default function ContactPage() {
               </button>
 
               {/* Alternative Contact */}
-              <p className="text-xs text-gray-600 mt-3">
+              <p className="text-xs text-white/80 mt-3">
                 You can also send us your request to{' '}
                 <a href="mailto:contact@hashverx.com" className="text-[#0859B2] hover:text-[#51CFDF] underline font-semibold">
                   contact@hashverx.com
@@ -208,7 +208,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right Side - What happens next */}
-          <div className="bg-gray-50 rounded-2xl p-6 lg:p-8 h-fit">
+          <div className="rounded-2xl p-6 lg:p-8 h-fit bg-white/10 backdrop-blur-xl border border-white/20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               What happens next?
             </h2>
@@ -224,13 +224,13 @@ export default function ContactPage() {
                       <div 
                         className="w-0.5 h-6 mt-2"
                         style={{
-                          backgroundImage: 'repeating-linear-gradient(to bottom, transparent, transparent 4px, #d1d5db 4px, #d1d5db 8px)'
+                          backgroundImage: 'repeating-linear-gradient(to bottom, transparent, transparent 4px, rgba(255,255,255,0.4) 4px, rgba(255,255,255,0.4) 8px)'
                         }}
                       ></div>
                     )}
                   </div>
                   <div className="flex-1 pt-0.5">
-                    <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+                    <p className="text-white/90 leading-relaxed text-sm md:text-base">
                       {step.description}
                     </p>
                   </div>

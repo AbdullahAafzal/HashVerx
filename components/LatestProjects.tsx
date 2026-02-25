@@ -212,9 +212,7 @@ export default function LatestProjects() {
                 style={{
                   minHeight: "460px",
                   width: "330px",
-                  flexShrink: 0,
-                  transform: hoveredCard === project.id ? "scale(1.02)" : "scale(1)",
-                  transition: "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)"
+                  flexShrink: 0
                 }}
                 onMouseEnter={() => setHoveredCard(project.id)}
                 onMouseLeave={() => setHoveredCard(null)}
@@ -241,14 +239,11 @@ export default function LatestProjects() {
                     hoveredCard === project.id ? "bg-gray-800/30" : "bg-gray-800/50"
                   }`}></div>
 
-                  {/* Hover overlay with black background - animated */}
+                  {/* Hover overlay with black background */}
                   <div
-                    className={`absolute inset-0 rounded-lg bg-black transition-all duration-500 ${
+                    className={`absolute inset-0 rounded-lg bg-black transition-opacity duration-500 ${
                       hoveredCard === project.id ? "opacity-60" : "opacity-0"
                     }`}
-                    style={{
-                      transform: hoveredCard === project.id ? "scale(1)" : "scale(0.95)",
-                    }}
                   ></div>
 
                   {/* Content */}

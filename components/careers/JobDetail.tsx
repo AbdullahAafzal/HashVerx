@@ -213,13 +213,7 @@ export default function JobDetail({ jobId }: { jobId: string }) {
   }, []);
 
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
-      {/* Background Decoration */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#51CFDF] rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0859B2] rounded-full blur-3xl"></div>
-      </div>
-
+    <section className="py-12 md:py-20 bg-transparent relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl relative z-10">
         <div ref={ref} className="space-y-6 md:space-y-8">
           {/* Back Button */}
@@ -242,40 +236,34 @@ export default function JobDetail({ jobId }: { jobId: string }) {
 
           {/* Job Header Card */}
           <div
-            className={`group relative bg-white rounded-2xl p-8 md:p-10 transition-all duration-700 hover:shadow-2xl ${
+            className={`group relative rounded-2xl p-8 md:p-10 transition-all duration-700 bg-white/10 backdrop-blur-xl border border-white/20 hover:border-[#51CFDF]/40 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
-            style={{
-              boxShadow: '0 10px 40px rgba(5, 89, 178, 0.1)',
-            }}
           >
-            {/* Gradient Border Effect */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#51CFDF]/0 via-[#51CFDF]/20 to-[#51CFDF]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-            
             {/* Job Title */}
             <div className="mb-6">
               <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
                 {job.title}
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+              <p className="text-lg md:text-xl text-white/85 leading-relaxed">
                 {job.description}
               </p>
             </div>
 
             {/* Job Meta Info */}
             <div className="flex flex-wrap gap-3">
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-cyan-50 border border-[#51CFDF]/30 rounded-xl px-5 py-2.5 shadow-sm">
+              <div className="inline-flex items-center space-x-2 border border-[#51CFDF]/40 bg-white/10 rounded-xl px-5 py-2.5">
                 <svg className="w-5 h-5 text-[#51CFDF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="text-[#0859B2] text-sm font-semibold">{job.location}</span>
+                <span className="text-[#51CFDF] text-sm font-semibold">{job.location}</span>
               </div>
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-50 to-blue-50 border border-[#51CFDF]/30 rounded-xl px-5 py-2.5 shadow-sm">
+              <div className="inline-flex items-center space-x-2 border border-[#51CFDF]/40 bg-white/10 rounded-xl px-5 py-2.5">
                 <svg className="w-5 h-5 text-[#51CFDF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="text-[#0859B2] text-sm font-semibold">{job.employmentType}</span>
+                <span className="text-[#51CFDF] text-sm font-semibold">{job.employmentType}</span>
               </div>
             </div>
           </div>
@@ -284,12 +272,9 @@ export default function JobDetail({ jobId }: { jobId: string }) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {/* Requirements Card */}
             <div
-              className={`group relative bg-white rounded-2xl p-8 transition-all duration-700 delay-200 hover:shadow-2xl ${
+              className={`group relative rounded-2xl p-8 transition-all duration-700 delay-200 bg-white/10 backdrop-blur-xl border border-white/20 hover:border-[#51CFDF]/40 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
-              style={{
-                boxShadow: '0 10px 40px rgba(5, 89, 178, 0.08)',
-              }}
             >
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-r from-[#0859B2] to-[#51CFDF] rounded-xl flex items-center justify-center">
@@ -307,7 +292,7 @@ export default function JobDetail({ jobId }: { jobId: string }) {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <p className="text-base text-gray-600 leading-relaxed flex-1">{req}</p>
+                    <p className="text-base text-white/85 leading-relaxed flex-1">{req}</p>
                   </li>
                 ))}
               </ul>
@@ -315,12 +300,9 @@ export default function JobDetail({ jobId }: { jobId: string }) {
 
             {/* Responsibilities Card */}
             <div
-              className={`group relative bg-white rounded-2xl p-8 transition-all duration-700 delay-300 hover:shadow-2xl ${
+              className={`group relative rounded-2xl p-8 transition-all duration-700 delay-300 bg-white/10 backdrop-blur-xl border border-white/20 hover:border-[#51CFDF]/40 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
-              style={{
-                boxShadow: '0 10px 40px rgba(5, 89, 178, 0.08)',
-              }}
             >
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-r from-[#51CFDF] to-[#0859B2] rounded-xl flex items-center justify-center">
@@ -338,7 +320,7 @@ export default function JobDetail({ jobId }: { jobId: string }) {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <p className="text-base text-gray-600 leading-relaxed flex-1">{resp}</p>
+                    <p className="text-base text-white/85 leading-relaxed flex-1">{resp}</p>
                   </li>
                 ))}
               </ul>
@@ -348,12 +330,9 @@ export default function JobDetail({ jobId }: { jobId: string }) {
           {/* Benefits Section */}
           {job.benefits && (
             <div
-              className={`group relative bg-gradient-to-br from-white to-blue-50/50 rounded-2xl p-8 md:p-10 transition-all duration-700 delay-400 hover:shadow-2xl ${
+              className={`group relative rounded-2xl p-8 md:p-10 transition-all duration-700 delay-400 bg-white/10 backdrop-blur-xl border border-white/20 hover:border-[#51CFDF]/40 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
-              style={{
-                boxShadow: '0 10px 40px rgba(5, 89, 178, 0.1)',
-              }}
             >
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-r from-[#51CFDF] to-[#0859B2] rounded-xl flex items-center justify-center">
@@ -365,11 +344,11 @@ export default function JobDetail({ jobId }: { jobId: string }) {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {job.benefits.map((benefit: string, index: number) => (
-                  <div key={index} className="flex items-center space-x-3 p-3 bg-white/60 rounded-xl hover:bg-white transition-colors duration-300">
+                  <div key={index} className="flex items-center space-x-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 border border-white/10 transition-colors duration-300">
                     <svg className="w-5 h-5 text-[#51CFDF] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-700 font-medium">{benefit}</span>
+                    <span className="text-white/90 font-medium">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -387,7 +366,7 @@ export default function JobDetail({ jobId }: { jobId: string }) {
               <p className="text-blue-100 mb-8 text-lg">Take the next step in your career journey</p>
               <Link
                 href="/contact"
-                className="group inline-flex items-center space-x-3 bg-white hover:bg-blue-50 text-[#0859B2] px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
+                className="group inline-flex items-center justify-center space-x-3 bg-[#51CFDF] hover:bg-[#6dd9e8] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg shadow-[#51CFDF]/30 hover:shadow-xl hover:scale-105 transform"
               >
                 <span>Apply Now</span>
                 <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
