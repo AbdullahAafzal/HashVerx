@@ -62,7 +62,7 @@ export default function UIUXDesignLayout() {
       />
       <ServiceTypesSection sectionTitle="Design & Video Services" items={TYPES_ITEMS} />
 
-      <section ref={colsRef} className="py-28 md:py-36 bg-transparent">
+      <section ref={colsRef} className="pt-16 pb-24 md:pt-20 md:pb-28 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`grid md:grid-cols-2 gap-10 transition-all duration-700 ${colsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
             <div className="p-12 rounded-3xl bg-white/10 backdrop-blur-xl border-2 border-white/30 shadow-xl">

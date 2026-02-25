@@ -23,8 +23,6 @@ const buildItems = whatWeBuild?.type === "list" ? whatWeBuild.items : [];
 const overviewCapabilities: OverviewCapability[] = buildItems.map((item) => ({
   title: item
 }));
-const whyUs = service.sections.find((s) => s.id === "why-us");
-const contact = service.sections.find((s) => s.id === "contact");
 
 const TYPES_ITEMS: ServiceTypeItem[] = [
   {
@@ -45,6 +43,49 @@ const TYPES_ITEMS: ServiceTypeItem[] = [
     title: "Software Integration Services",
     image: businessSystemsImage,
     hoverText: `If you face data chaos then you can enable smooth data exchange between your business software systems with software integration. All the deployment challenges are addressed here and scalable integrations are implemented. For a unified workflow, regulations like HIPAA, GAMP, PCI, and DSS are implemented.`
+  }
+];
+
+const WHY_CHOOSE_ITEMS = [
+  {
+    title: "End-to-end capabilities",
+    description:
+      "We support all stages of the software development lifecycle, from strategy and design to deployment and continuous optimization."
+  },
+  {
+    title: "Industry knowledge",
+    description:
+      "Our experts understand complex industry regulations and operating models, enabling solutions tailored to your business context."
+  },
+  {
+    title: "AI leadership",
+    description:
+      "We bring AI-first thinking to modern applications, combining data, automation, and governance to unlock new value safely."
+  },
+  {
+    title: "Future-ready solutions",
+    description:
+      "Cloud-native, modular architectures ensure your platforms can scale, evolve, and integrate with emerging technologies."
+  },
+  {
+    title: "Commitment to customer success",
+    description:
+      "We co-create with your teams, focusing on measurable business outcomes and long-term partnership rather than one-off projects."
+  },
+  {
+    title: "Top engineering talent",
+    description:
+      "Our senior engineers bring deep experience across domains, modern stacks, and complex enterprise environments."
+  },
+  {
+    title: "Enterprise-grade security",
+    description:
+      "Security-by-design practices and compliance-aware delivery keep your data and systems protected from day one."
+  },
+  {
+    title: "Global delivery and scalability",
+    description:
+      "Flexible engagement models and distributed teams help you scale delivery while maintaining speed and quality."
   }
 ];
 
@@ -75,36 +116,20 @@ export default function CustomSoftwareLayout() {
         capabilities={overviewCapabilities}
         image={overviewImage}
         imageAlt="Custom software development"
-        capabilitiesHeading="What we build:"
+        capabilitiesHeading="Our core strengths:"
       />
-      <ServiceTypesSection sectionTitle="What We Build" items={TYPES_ITEMS} />
+      <ServiceTypesSection
+        sectionTitle="Comprehensive Custom Software Services"
+        items={TYPES_ITEMS}
+      />
 
-      <section ref={sectionRef} className="py-28 md:py-36 bg-transparent">
+      <section
+        ref={sectionRef}
+        className="pt-6 pb-24 md:pt-10 md:pb-32 bg-transparent"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
-            className={`grid grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-700 ${
-              sectionVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-6"
-            }`}
-          >
-            {buildItems.map((item, i) => (
-              <div
-                key={i}
-                className="p-6 md:p-8 rounded-2xl border-2 border-white/30 bg-white/10 backdrop-blur-xl hover:border-[#51CFDF]/40 transition-colors flex items-center gap-4"
-              >
-                <span className="w-14 h-14 rounded-xl bg-[#0859B2] text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-                  {i + 1}
-                </span>
-                <span className="font-semibold text-white text-lg">
-                  {item}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <div
-            className={`mt-20 rounded-3xl border-2 border-[#51CFDF]/25 bg-white/10 backdrop-blur-xl p-10 md:p-14 shadow-lg transition-all duration-700 delay-100 ${
+            className={`mt-12 rounded-3xl border-2 border-[#51CFDF]/25 bg-white/10 backdrop-blur-xl p-10 md:p-14 shadow-lg transition-all duration-700 delay-100 ${
               sectionVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-6"
@@ -114,46 +139,161 @@ export default function CustomSoftwareLayout() {
           </div>
 
           <div
-            className={`mt-20 grid md:grid-cols-2 gap-10 transition-all duration-700 delay-200 ${
+            className={`mt-20 transition-all duration-700 delay-200 ${
               sectionVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-6"
             }`}
           >
-            <div className="p-10 md:p-12 rounded-3xl bg-[#0859B2] text-white">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6">Why us</h3>
-              <p className="text-white/90 leading-relaxed text-lg">
-                {whyUs?.type === "paragraph" ? whyUs.content : ""}
-              </p>
-            </div>
-            <div className="p-10 md:p-12 rounded-3xl border-2 border-[#51CFDF]/30 bg-white/10 backdrop-blur-xl flex flex-col justify-between">
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                  Get started
-                </h3>
-                <p className="text-white leading-relaxed text-lg mb-8">
-                  {contact?.type === "paragraph" ? contact.content : ""}
-                </p>
-              </div>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-[#51CFDF] hover:bg-[#6dd9e8] text-white px-8 py-4 rounded-lg font-semibold text-base w-fit"
-              >
-                Book a consultation
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-10">
+              Why enterprises choose Hashverx for custom software development
+            </h2>
+            <div className="space-y-5">
+              {WHY_CHOOSE_ITEMS.map((item, index) => (
+                <div
+                  key={item.title}
+                  className="flex flex-col md:flex-row md:items-start gap-4 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-xl px-6 py-6 shadow-md"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </Link>
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full border border-white/40 flex items-center justify-center text-white">
+                    {index === 0 && (
+                      <svg
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 12h14M12 5l7 7-7 7"
+                          stroke="#FFFFFF"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    )}
+                    {index === 1 && (
+                      <svg
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4 7h16M4 12h10M4 17h6"
+                          stroke="#FFFFFF"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    )}
+                    {index === 2 && (
+                      <svg
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 20v-6M9 20h6M8 10a4 4 0 118 0c0 2-2 3-4 3s-4-1-4-3z"
+                          stroke="#FFFFFF"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    )}
+                    {index === 3 && (
+                      <svg
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4 19h16M7 16V5h10v11"
+                          stroke="#FFFFFF"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    )}
+                    {index === 4 && (
+                      <svg
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 13l4 4L19 7"
+                          stroke="#FFFFFF"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    )}
+                    {index === 5 && (
+                      <svg
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 2l3 7h7l-5.5 4.1L18 21l-6-3.8L6 21l1.5-7.9L2 9h7z"
+                          stroke="#FFFFFF"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    )}
+                    {index === 6 && (
+                      <svg
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4 7h16v10H4V7zM4 11h16"
+                          stroke="#FFFFFF"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    )}
+                    {index === 7 && (
+                      <svg
+                        className="w-6 h-6"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3 11h4l3 8 4-16 3 8h4"
+                          stroke="#FFFFFF"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    )}
+                  </div>
+                  <div>
+                    <h3 className="text-lg md:text-xl font-semibold mb-1 text-white">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm md:text-base text-white/80 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

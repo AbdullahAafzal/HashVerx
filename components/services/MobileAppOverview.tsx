@@ -50,7 +50,7 @@ export default function MobileAppOverview() {
   }, []);
 
   return (
-    <section className="py-28 md:py-36 bg-transparent">
+    <section className="pt-24 pb-10 md:pt-28 md:pb-12 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div
           ref={ref}
@@ -67,13 +67,10 @@ export default function MobileAppOverview() {
               Overview
             </h2>
             <p className="text-lg md:text-xl text-white leading-relaxed mb-10">
-              Mobile apps have transformed the way businesses and customers
-              engage with each other. Today, businesses require an engaging
-              mobile presence to enhance visibility, expand reach, and drive
-              customer engagement and loyalty. As a globally recognized mobile
-              applications development company, our mission is to help you
-              deliver seamless brand experiences through innovative and reliable
-              mobile applications.
+              Every app we build is engineered to drive measurable business
+              outcomes. With expertise spanning cutting-edge native development,
+              cross-platform solutions, and enterprise-grade systems, our
+              engineers transform bold ideas into dynamic mobile experiences.
             </p>
             <h3 className="text-2xl font-bold text-white mb-8">
               What we are good at:

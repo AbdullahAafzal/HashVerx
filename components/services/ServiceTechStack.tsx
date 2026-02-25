@@ -80,15 +80,14 @@ export default function ServiceTechStack() {
           return (
             <div
               key={tech}
-              className="bg-white/10 backdrop-blur-xl border border-white/30 rounded-xl p-4 flex flex-col items-center justify-center gap-2 hover:border-[#51CFDF] hover:shadow-lg hover:shadow-[#51CFDF]/20 transition-all duration-300"
-              style={{ boxShadow: '0 2px 8px rgba(81, 207, 223, 0.08)' }}
+              className="bg-white rounded-xl p-4 flex flex-col items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-300"
             >
               {img && (
                 <div className="relative w-14 h-14">
                   <Image src={img.src} alt={tech} fill className="object-contain" sizes="56px" />
                 </div>
               )}
-              <span className="text-sm font-medium text-white">{img?.name ?? tech}</span>
+              <span className="text-sm font-medium text-[#0859B2]">{img?.name ?? tech}</span>
             </div>
           );
         })}

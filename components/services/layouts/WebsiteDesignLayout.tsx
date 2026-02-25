@@ -69,7 +69,7 @@ export default function WebsiteDesignLayout() {
       />
       <ServiceTypesSection sectionTitle="Website Types We Build" items={TYPES_ITEMS} />
 
-      <section ref={cardsRef} className="py-28 md:py-36 bg-transparent">
+      <section ref={cardsRef} className="pt-16 pb-24 md:pt-20 md:pb-28 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">What we offer</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -97,7 +97,7 @@ export default function WebsiteDesignLayout() {
         </div>
       </section>
 
-      <section className="py-28 md:py-36 bg-transparent">
+      <section className="pt-16 pb-24 md:pt-20 md:pb-28 bg-transparent">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-12 md:p-16 rounded-3xl border-2 border-[#51CFDF]/30 bg-white/10 backdrop-blur-xl">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">SEO ready</h3>

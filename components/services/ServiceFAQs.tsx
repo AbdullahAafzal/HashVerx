@@ -42,8 +42,8 @@ export default function ServiceFAQs({ faqs = defaultFaqs }: ServiceFAQsProps) {
   };
 
   return (
-    <section className="py-20 bg-transparent relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+    <section className="pt-2 pb-20 md:pt-4 md:pb-24 bg-transparent relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           <span className="text-white">
             FAQs

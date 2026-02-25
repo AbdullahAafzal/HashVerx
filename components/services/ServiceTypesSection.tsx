@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import type { StaticImageData } from 'next/image';
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
 
 export interface ServiceTypeItem {
   id: string;
@@ -17,11 +17,14 @@ interface ServiceTypesSectionProps {
   items: ServiceTypeItem[];
 }
 
-export default function ServiceTypesSection({ sectionTitle, items }: ServiceTypesSectionProps) {
+export default function ServiceTypesSection({
+  sectionTitle,
+  items
+}: ServiceTypesSectionProps) {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   return (
-    <section className="py-28 md:py-36 bg-transparent">
+    <section className="pt-10 pb-12 md:pt-14 md:pb-16 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
           {sectionTitle}
@@ -41,16 +44,16 @@ export default function ServiceTypesSection({ sectionTitle, items }: ServiceType
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-300"
+                    className="object-cover opacity-85 group-hover:opacity-95 transition-opacity duration-300"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-black/25 group-hover:bg-black/55 transition-colors duration-300" />
                 </div>
                 <div
-                  className={`absolute inset-0 p-5 flex flex-col justify-between bg-black/60 pt-14 pb-20 transition-all duration-500 ease-out ${
+                  className={`absolute inset-0 p-5 flex flex-col justify-between bg-black/50 pt-14 pb-20 transition-all duration-500 ease-out ${
                     isHovered
-                      ? 'opacity-100 translate-y-0'
-                      : 'opacity-0 translate-y-4 pointer-events-none'
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4 pointer-events-none"
                   }`}
                 >
                   <p className="text-white text-sm leading-relaxed overflow-y-auto flex-1">
@@ -58,7 +61,9 @@ export default function ServiceTypesSection({ sectionTitle, items }: ServiceType
                   </p>
                 </div>
                 <div className="absolute top-0 left-0 right-0 p-5 z-10">
-                  <h3 className="text-xl font-bold text-white drop-shadow-md">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-white drop-shadow-md">
+                    {item.title}
+                  </h3>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-5 flex justify-center z-10">
                   <Link

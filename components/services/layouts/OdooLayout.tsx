@@ -69,7 +69,7 @@ export default function OdooLayout() {
       <ServiceTypesSection sectionTitle="Our Odoo Services" items={TYPES_ITEMS} />
 
       {/* What Makes Odoo an Attractive Choice Section */}
-      <section className="py-28 md:py-36 bg-transparent">
+      <section className="pt-16 pb-24 md:pt-20 md:pb-28 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
             What Makes Odoo an Attractive Choice
@@ -157,7 +157,7 @@ export default function OdooLayout() {
         </div>
       </section>
 
-      <section ref={cardsRef} className="py-28 md:py-36 bg-transparent">
+      <section ref={cardsRef} className="pt-16 pb-24 md:pt-20 md:pb-28 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">What we offer</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -177,7 +177,7 @@ export default function OdooLayout() {
         </div>
       </section>
 
-      <section className="py-28 md:py-36 bg-transparent">
+      <section className="pt-16 pb-24 md:pt-20 md:pb-28 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-10">
             <div className="p-10 md:p-14 rounded-3xl bg-[#0859B2] text-white">

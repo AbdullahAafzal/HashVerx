@@ -16,27 +16,22 @@ export const servicesData: Record<string, ServiceDetail> = {
     title: "Custom Software Development",
     subtitle: "Bespoke solutions tailored to your unique business needs.",
     slug: "custom-software-development",
-    intro: `A well-crafted SaaS development service can catalyze businesses looking to tap into digital technology. It can create functional, adaptable, and secure software to provide excellent user experiences.
- 
-From ideation to deployment, Hashverx partners with you to create user-centric SAAS software solutions that can drive innovation and growth.`,
+    intro: `We help enterprises overcome key business challenges and unlock growth opportunities with custom software tailored to unique operational, governance, and scalability needs. Our AI-first mindset, strategy-led modernization, and end-to-end engineering capabilities allow us to support enterprises at various levels of infrastructure and AI maturity. With over two decades of experience across regulated and complex environments, we deliver software development services that balance stability, resilience, and innovation at enterprise scale.`,
     sections: [
       {
         id: "overview",
         title: "Overview",
         type: "overview",
-        content: `A well-crafted SaaS development service can catalyze businesses looking to tap into digital technology. It can create functional, adaptable, and secure software to provide excellent user experiences.
- 
-From ideation to deployment, Hashverx partners with you to create user-centric SAAS software solutions that can drive innovation and growth.`
+        content: `We help enterprises overcome key business challenges and unlock growth opportunities with custom software tailored to unique operational, governance, and scalability needs. Our AI-first mindset, strategy-led modernization, and end-to-end engineering capabilities allow us to support enterprises at various levels of infrastructure and AI maturity. With over two decades of experience across regulated and complex environments, we deliver software development services that balance stability, resilience, and innovation at enterprise scale.`
       },
       {
         id: "what-we-build",
-        title: "What We Build",
+        title: "Our core strengths:",
         type: "list",
         items: [
-          "Web Applications",
-          "SaaS Platforms",
-          "Business Systems",
-          "Internal Tools"
+          "Built for Flexibility and Growth",
+          "Cross-Industry Customization",
+          "Seamless Integration and Modernization"
         ]
       },
       {

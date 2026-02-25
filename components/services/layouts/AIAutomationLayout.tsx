@@ -62,7 +62,7 @@ export default function AIAutomationLayout() {
       />
       <ServiceTypesSection sectionTitle="What We Automate & Deliver" items={TYPES_ITEMS} />
 
-      <section ref={bentoRef} className="py-28 md:py-36 bg-transparent">
+      <section ref={bentoRef} className="pt-16 pb-24 md:pt-20 md:pb-28 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">What we offer</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -80,7 +80,7 @@ export default function AIAutomationLayout() {
         </div>
       </section>
 
-      <section className="py-28 md:py-36 bg-transparent">
+      <section className="pt-16 pb-24 md:pt-20 md:pb-28 bg-transparent">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-12 md:p-16 rounded-3xl bg-[#0859B2] text-white text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-6">Business benefits</h3>

@@ -39,7 +39,7 @@ export default function ServiceOverviewSection({
   }, []);
 
   return (
-    <section className="py-28 md:py-36 bg-transparent">
+    <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div ref={ref} className="grid md:grid-cols-12 gap-14 lg:gap-20 items-center">
           <div
@@ -47,10 +47,10 @@ export default function ServiceOverviewSection({
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'
             }`}
           >
-            <h2 className="text-[#51CFDF] text-3xl md:text-4xl font-bold uppercase tracking-wider mb-5">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
               Overview
             </h2>
-            <p className="text-lg md:text-xl text-white leading-relaxed mb-10">
+            <p className="text-lg text-white/90 leading-relaxed mb-10">
               {intro}
             </p>
             <h3 className="text-2xl font-bold text-white mb-8">{capabilitiesHeading}</h3>
