@@ -248,14 +248,27 @@ export const servicesData: Record<string, ServiceDetail> = {
     subtitle: "Modern, fast, and SEO-ready websites.",
     slug: "website-design-development",
     intro:
-      "Our full-stack web application development services include everything from ideation and design to development and launch. Our expert team of developers specialize in creating custom websites that are visually stunning, intuitive, and functional. Whether it's a static website or a dynamic web application, we use the latest technologies to build high-performance websites that deliver measurable results.",
+      "We're constantly testing, updating, and refining our web development processes to ensure we meet all quality standards and deliver the very best. Our developers stay on top of the latest innovations, making sure your project benefits from the newest technologies.",
     sections: [
       {
         id: "overview",
         title: "Overview",
         type: "overview",
         content:
-          "Our full-stack web application development services include everything from ideation and design to development and launch. Our expert team of developers specialize in creating custom websites that are visually stunning, intuitive, and functional. Whether it's a static website or a dynamic web application, we use the latest technologies to build high-performance websites that deliver measurable results."
+          "We're constantly testing, updating, and refining our web development processes to ensure we meet all quality standards and deliver the very best. Our developers stay on top of the latest innovations, making sure your project benefits from the newest technologies."
+      },
+      {
+        id: "web-dev-features",
+        title: "Your web development solutions will feature:",
+        type: "list",
+        items: [
+          "Custom Features|Designed to meet your specific needs and requirements.",
+          "Intuitive UI/UX Design|Visually appealing, accessible, and inclusive. Ensuring easy navigation and high customer satisfaction.",
+          "Scalability and Security|Built-in scalability and industry-standard security from the start.",
+          "Responsive Design|Your website will adjust flawlessly to any screen size, any device.",
+          "Professional Imagery|High-quality, engaging visuals that capture your brand's essence.",
+          "Ongoing Maintenance and Support|Continuous support and updates to keep your solution running smoothly."
+        ]
       },
       {
         id: "website-types",

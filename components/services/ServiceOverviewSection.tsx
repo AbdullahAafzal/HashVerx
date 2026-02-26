@@ -15,6 +15,8 @@ interface ServiceOverviewSectionProps {
   image: string | StaticImageData;
   imageAlt: string;
   capabilitiesHeading?: string;
+  useCheckmarks?: boolean;
+  imageTall?: boolean;
 }
 
 export default function ServiceOverviewSection({
@@ -23,6 +25,8 @@ export default function ServiceOverviewSection({
   image,
   imageAlt,
   capabilitiesHeading = 'What we are good at:',
+  useCheckmarks = false,
+  imageTall = false,
 }: ServiceOverviewSectionProps) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -57,7 +61,13 @@ export default function ServiceOverviewSection({
             <ul className="space-y-4">
               {capabilities.map((item, i) => (
                 <li key={i} className="flex gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#51CFDF] mt-2.5 flex-shrink-0" />
+                  {useCheckmarks ? (
+                    <span className="text-[#51CFDF] mt-1 flex-shrink-0">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    </span>
+                  ) : (
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#51CFDF] mt-2.5 flex-shrink-0" />
+                  )}
                   <div>
                     <span className="font-semibold text-white">{item.title}</span>
                     {item.description != null && item.description !== '' && (
@@ -69,9 +79,9 @@ export default function ServiceOverviewSection({
             </ul>
           </div>
           <div
-            className={`md:col-span-7 relative aspect-[4/3] md:aspect-[16/10] min-h-[320px] rounded-2xl overflow-hidden border border-[#51CFDF]/30 shadow-xl transition-all duration-700 delay-200 ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'
-            }`}
+            className={`md:col-span-7 relative rounded-2xl overflow-hidden border border-[#51CFDF]/30 shadow-xl transition-all duration-700 delay-200 ${
+              imageTall ? 'aspect-[4/3] md:aspect-[8/7] min-h-[320px] md:min-h-[360px]' : 'aspect-[4/3] md:aspect-[16/10] min-h-[320px]'
+            } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`}
           >
             <Image
               src={image}
