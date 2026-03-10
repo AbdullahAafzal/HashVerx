@@ -44,13 +44,17 @@ export default function Header() {
   const isServicePage = pathname.startsWith("/services");
 
   return (
-    <header 
-      className={`relative top-0 left-0 right-0 z-50 ${isServicePage ? 'backdrop-blur-none' : 'backdrop-blur-sm'}`}
+    <header
+      className={`relative top-0 left-0 right-0 z-50 ${
+        isServicePage ? "backdrop-blur-none" : "backdrop-blur-sm"
+      }`}
     >
       <div
         className="absolute inset-0"
         style={{
-          background: isServicePage ? "transparent" : "rgba(255, 255, 255, 0.05)"
+          background: isServicePage
+            ? "transparent"
+            : "rgba(255, 255, 255, 0.05)"
         }}
       ></div>
       <nav className="relative container mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,8 +64,8 @@ export default function Header() {
             <Image
               src={logoImage}
               alt="HashVerx Logo"
-              width={100}
-              height={100}
+              width={130}
+              height={130}
               className="object-contain"
             />
             {/* <span className="text-white text-xl font-bold">HashVerx</span> */}
@@ -72,9 +76,7 @@ export default function Header() {
             <Link
               href="/"
               className={`font-semibold text-base transition-colors ${
-                isActive("/")
-                  ? "text-white"
-                  : "text-white hover:text-[#51CFDF]"
+                isActive("/") ? "text-white" : "text-white hover:text-[#51CFDF]"
               }`}
             >
               Home

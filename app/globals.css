@@ -44,15 +44,29 @@ body {
   min-height: 100vh;
 }
 
-/* Make all text white by default - override Tailwind text color classes */
+/* Make all text white by default - override Tailwind text color classes for consistent display across systems */
 .text-\[#0859B2\],
+.text-gray-100,
+.text-gray-200,
+.text-gray-300,
 .text-gray-400,
 .text-gray-500,
 .text-gray-600,
 .text-gray-700,
+.text-gray-800,
 .text-gray-900,
+.text-slate-300,
+.text-slate-400,
+.text-slate-500,
+.text-neutral-400,
+.text-neutral-500,
 .text-black {
-  color: white !important;
+  color: #ffffff !important;
+}
+
+/* Force opacity-based white text to solid white for cross-system consistency */
+[class*="text-white/"] {
+  color: #ffffff !important;
 }
 
 /* Ensure headings are white or light blue - override dark blue */

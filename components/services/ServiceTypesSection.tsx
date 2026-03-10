@@ -56,7 +56,7 @@ export default function ServiceTypesSection({
                       : "opacity-0 translate-y-4 pointer-events-none"
                   }`}
                 >
-                  <p className="text-white text-sm leading-relaxed overflow-y-auto flex-1">
+                  <p className="text-white text-sm leading-relaxed text-justify overflow-y-auto flex-1">
                     {item.hoverText}
                   </p>
                 </div>

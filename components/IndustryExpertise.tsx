@@ -200,7 +200,7 @@ export default function IndustryExpertise() {
                   <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                     {industry.title}
                   </h3>
-                  <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                  <p className="text-white text-base md:text-lg leading-relaxed">
                     {industry.description}
                   </p>
                 </div>
