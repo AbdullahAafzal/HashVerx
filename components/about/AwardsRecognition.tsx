@@ -57,9 +57,9 @@ export default function AwardsRecognition() {
   }, []);
 
   return (
-    <section className="py-20 bg-white relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+    <section className="py-20 relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">
           Awards &{" "}
           <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent">
             Recognitions
@@ -75,11 +75,10 @@ export default function AwardsRecognition() {
             <div
               key={index}
               ref={(el: any) => (cardRefs.current[index] = el)}
-              className={`bg-white/60 backdrop-blur-xl border border-[#51CFDF]/30 rounded-xl p-6 transition-all duration-700 hover:border-[#51CFDF]/70 hover:-translate-y-1 ${
-                visibleCards.has(index)
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
-              }`}
+              className={`border border-[#51CFDF]/30 rounded-xl p-6 transition-all duration-700 hover:border-[#51CFDF]/70 hover:-translate-y-1 ${visibleCards.has(index)
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+                }`}
               style={{
                 transitionDelay: `${index * 0.1}s`,
                 boxShadow:

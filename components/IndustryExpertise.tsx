@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import educationImage from "../assets/Industries/education.png";
-import bankingImage from "../assets/Industries/Banking.png";
-import ecommerceImage from "../assets/Industries/ecommerce.png";
-import healthcareImage from "../assets/Industries/Healthcare.png";
-import travelImage from "../assets/Industries/Travel.png";
+import educationImage from "../assets/Industries/education.jpeg";
+import bankingImage from "../assets/Industries/banking.jpeg";
+import ecommerceImage from "../assets/Industries/ecomerce.jpeg";
+import healthcareImage from "../assets/Industries/healthcare.jpeg";
+import travelImage from "../assets/Industries/travel.jpeg";
 
 const industries = [
   {
@@ -49,14 +49,14 @@ export default function IndustryExpertise() {
   return (
     <section className="py-20 md:py-28 relative overflow-hidden bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16 md:mb-20">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 md:mb-20">
           <span className="text-white">Where We Exceed </span>
           <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent">
             Customers' Expectations
           </span>
         </h2>
 
-        <div className="max-w-7xl mx-auto space-y-12 md:space-y-20">
+        <div className="mx-auto space-y-12 md:space-y-20">
           {industries.map((industry, index) => {
             const isEven = index % 2 === 0;
             // Even indices: image left (order-1), text right (order-2)
@@ -69,11 +69,10 @@ export default function IndustryExpertise() {
               >
                 {/* Number Badge */}
                 <div
-                  className={`absolute ${
-                    isEven
-                      ? "top-4 left-4 md:left-auto md:right-[calc(50%-2.5rem)]"
-                      : "top-4 right-4 md:right-auto md:left-[calc(50%-2.5rem)]"
-                  } z-20 w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-[#0859B2] to-[#51CFDF] border-2 border-white flex items-center justify-center shadow-xl`}
+                  className={`absolute ${isEven
+                    ? "top-4 left-4 md:left-auto md:right-[calc(50%-2.5rem)]"
+                    : "top-4 right-4 md:right-auto md:left-[calc(50%-2.5rem)]"
+                    } z-20 w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-[#0859B2] to-[#51CFDF] border-2 border-white flex items-center justify-center shadow-xl`}
                 >
                   <span className="text-white font-bold text-xl md:text-2xl">
                     {industry.number}
@@ -82,9 +81,8 @@ export default function IndustryExpertise() {
 
                 {/* Image Container */}
                 <div
-                  className={`relative w-full md:w-1/2 ${
-                    isEven ? "md:order-1" : "md:order-2"
-                  }`}
+                  className={`relative w-full md:w-1/2 ${isEven ? "md:order-1" : "md:order-2"
+                    }`}
                 >
                   <div className="relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden aspect-[4/3] shadow-2xl transform transition-transform hover:scale-[1.02] duration-300">
                     <Image
@@ -95,7 +93,7 @@ export default function IndustryExpertise() {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Hexagonal overlay pattern with connected network */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none">
+                    {/* <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none">
                       <svg
                         width="100%"
                         height="100%"
@@ -187,15 +185,14 @@ export default function IndustryExpertise() {
                           fill={`url(#hex-pattern-${index})`}
                         />
                       </svg>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
                 {/* Text Content */}
                 <div
-                  className={`w-full md:w-1/2 ${
-                    isEven ? "md:order-2" : "md:order-1"
-                  } flex flex-col justify-center`}
+                  className={`w-full md:w-1/2 ${isEven ? "md:order-2" : "md:order-1"
+                    } flex flex-col justify-center`}
                 >
                   <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                     {industry.title}

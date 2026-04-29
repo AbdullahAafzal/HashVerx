@@ -29,11 +29,11 @@ export default function CTASection() {
   }, []);
 
   return (
-    <section className="py-20 bg-white relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+    <section className="py-20 relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
-          className="bg-white/60 backdrop-blur-xl border border-[#51CFDF]/30 rounded-2xl p-12 md:p-16 text-center relative overflow-hidden"
+          className=" border border-[#51CFDF]/30 rounded-2xl p-12 md:p-16 text-center relative overflow-hidden"
           style={{
             boxShadow: '0 8px 32px rgba(81, 207, 223, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
           }}
@@ -50,9 +50,8 @@ export default function CTASection() {
 
           <div className="relative z-10">
             <h2
-              className={`text-3xl md:text-4xl lg:text-5xl font-bold text-[#0859B2] mb-6 transition-all duration-700 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+              className={`text-3xl md:text-4xl lg:text-5xl font-bold text-[#0859B2] mb-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
             >
               Ready to partner with{' '}
               <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent">
@@ -60,17 +59,15 @@ export default function CTASection() {
               </span>
             </h2>
             <p
-              className={`text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto transition-all duration-700 delay-200 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+              className={`text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
             >
               Let's build something great together.
             </p>
             <Link
               href="/contact"
-              className={`inline-flex items-center space-x-2 bg-gradient-to-r from-[#0859B2] to-[#51CFDF] hover:from-[#51CFDF] hover:to-[#6dd9e8] text-white px-8 py-3 rounded-lg font-semibold text-sm md:text-base transition-all shadow-lg shadow-[#51CFDF]/20 hover:shadow-xl hover:shadow-[#51CFDF]/30 hover:scale-105 transform uppercase tracking-wide transition-all duration-700 delay-300 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+              className={`inline-flex items-center space-x-2 bg-gradient-to-r from-[#0859B2] to-[#51CFDF] hover:from-[#51CFDF] hover:to-[#6dd9e8] text-white px-8 py-3 rounded-lg font-semibold text-sm md:text-base transition-all shadow-lg shadow-[#51CFDF]/20 hover:shadow-xl hover:shadow-[#51CFDF]/30 hover:scale-105 transform uppercase tracking-wide transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
             >
               <span>START A PROJECT</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

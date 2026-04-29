@@ -46,12 +46,12 @@ export default function MissionVision() {
   }, []);
 
   return (
-    <section className="py-20 bg-white relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl space-y-12">
+    <section className="py-20 relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Mission */}
         <div
           ref={missionRef}
-          className="bg-white/60 backdrop-blur-xl border border-[#51CFDF]/30 rounded-2xl p-8 md:p-12"
+          className=" border border-[#51CFDF]/30 rounded-2xl p-8 md:p-12"
           style={{
             boxShadow: '0 8px 32px rgba(81, 207, 223, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
           }}
@@ -59,9 +59,8 @@ export default function MissionVision() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Side - Image */}
             <div
-              className={`transition-all duration-700 ${
-                missionVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
-              }`}
+              className={`transition-all duration-700 ${missionVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+                }`}
             >
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
                 <Image
@@ -77,9 +76,8 @@ export default function MissionVision() {
 
             {/* Right Side - Text */}
             <div
-              className={`transition-all duration-700 delay-200 ${
-                missionVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-              }`}
+              className={`transition-all duration-700 delay-200 ${missionVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+                }`}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Our Mission
@@ -99,7 +97,7 @@ export default function MissionVision() {
         {/* Vision */}
         <div
           ref={visionRef}
-          className="bg-white/60 backdrop-blur-xl border border-[#51CFDF]/30 rounded-2xl p-8 md:p-12"
+          className="border border-[#51CFDF]/30 rounded-2xl p-8 md:p-12"
           style={{
             boxShadow: '0 8px 32px rgba(81, 207, 223, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
           }}
@@ -107,9 +105,8 @@ export default function MissionVision() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text */}
             <div
-              className={`transition-all duration-700 ${
-                visionVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
-              }`}
+              className={`transition-all duration-700 ${visionVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+                }`}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Our Vision
@@ -121,9 +118,8 @@ export default function MissionVision() {
 
             {/* Right Side - Image */}
             <div
-              className={`transition-all duration-700 delay-200 ${
-                visionVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-              }`}
+              className={`transition-all duration-700 delay-200 ${visionVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+                }`}
             >
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
                 <Image

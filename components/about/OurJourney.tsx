@@ -28,7 +28,7 @@ export default function OurJourney() {
   }, []);
 
   return (
-    <section className="py-20 bg-white relative">
+    <section className="py-20 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         <div
           ref={ref}
@@ -38,16 +38,14 @@ export default function OurJourney() {
           }}
         >
           <h2
-            className={`text-3xl md:text-4xl font-bold text-[#0859B2] mb-6 transition-all duration-700 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
+            className={`text-3xl md:text-4xl font-bold text-[#0859B2] mb-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
           >
             Our Journey
           </h2>
           <p
-            className={`text-base md:text-lg text-gray-300 leading-relaxed transition-all duration-700 delay-200 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
+            className={`text-base md:text-lg text-gray-300 leading-relaxed transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
           >
             From launching innovative digital products to solving complex technological challenges, HashVerx has been at the forefront of software development. Our journey is marked by continuous learning, adaptation, and a relentless pursuit of excellence. We've grown from a small team of passionate developers to a trusted partner for businesses worldwide, always staying ahead of technological trends and delivering solutions that make a real impact.
           </p>

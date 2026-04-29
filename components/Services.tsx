@@ -59,13 +59,13 @@ export default function Services() {
   return (
     <section className="py-16 bg-transparent relative">
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+        <div className="flex flex-col gap-8 lg:gap-12 items-start">
           {/* Left Side - Text Content */}
-          <div className="space-y-6 md:col-span-1 lg:col-span-2">
+          <div className="container px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
             <p className="text-sm font-semibold text-[#51CFDF] uppercase tracking-wider">
               Featured Insights
             </p>
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl mb-3 font-bold leading-tight text-white">
               Stories of our transformations across{" "}
               <span className="text-[#51CFDF]">Services</span> and{" "}
               <span className="text-[#51CFDF]">Industries</span>
@@ -103,18 +103,17 @@ export default function Services() {
           </div>
 
           {/* Right Side - Solution Cards Grid (3 columns) */}
-          <div className="md:col-span-1 lg:col-span-3 grid grid-cols-3 gap-4">
+          <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full ">
             {/* Column 1: First 2 items */}
             <div className="flex flex-col gap-4">
               {solutions.slice(0, 2).map((solution, index) => (
                 <div
                   key={index}
                   ref={(el: any) => (cardRefs.current[index] = el)}
-                  className={`group relative aspect-square rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 ${
-                    visibleCards.has(index)
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-8"
-                  }`}
+                  className={`group relative aspect-square rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 ${visibleCards.has(index)
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                    }`}
                   style={{
                     transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
                     transitionDelay: `${index * 0.1}s`
@@ -140,17 +139,16 @@ export default function Services() {
 
             {/* Column 2: Next 3 items */}
             <div className="flex flex-col gap-4">
-              {solutions.slice(2, 5).map((solution, index) => {
+              {solutions.slice(2, 4).map((solution, index) => {
                 const actualIndex = index + 2;
                 return (
                   <div
                     key={actualIndex}
                     ref={(el: any) => (cardRefs.current[actualIndex] = el)}
-                    className={`group relative aspect-square rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 ${
-                      visibleCards.has(actualIndex)
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-8"
-                    }`}
+                    className={`group relative aspect-square rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 ${visibleCards.has(actualIndex)
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-8"
+                      }`}
                     style={{
                       transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
                       transitionDelay: `${actualIndex * 0.1}s`
@@ -177,17 +175,52 @@ export default function Services() {
 
             {/* Column 3: Last 3 items */}
             <div className="flex flex-col gap-4">
-              {solutions.slice(5, 8).map((solution, index) => {
-                const actualIndex = index + 5;
+              {solutions.slice(4, 6).map((solution, index) => {
+                const actualIndex = index + 2;
                 return (
                   <div
                     key={actualIndex}
                     ref={(el: any) => (cardRefs.current[actualIndex] = el)}
-                    className={`group relative aspect-square rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 ${
-                      visibleCards.has(actualIndex)
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-8"
-                    }`}
+                    className={`group relative aspect-square rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 ${visibleCards.has(actualIndex)
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-8"
+                      }`}
+                    style={{
+                      transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+                      transitionDelay: `${actualIndex * 0.1}s`
+                    }}
+                  >
+                    <div className="absolute inset-0">
+                      <Image
+                        src={solution.image}
+                        alt={solution.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 50vw, 20vw"
+                      />
+                    </div>
+                    <div className="absolute inset-0 flex items-end p-4 ">
+                      <h4 className="text-white font-bold text-base md:text-lg leading-tight drop-shadow">
+                        {solution.title}
+                      </h4>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Column 3: Last 3 items */}
+            <div className="flex flex-col gap-4">
+              {solutions.slice(6, 8).map((solution, index) => {
+                const actualIndex = index + 2;
+                return (
+                  <div
+                    key={actualIndex}
+                    ref={(el: any) => (cardRefs.current[actualIndex] = el)}
+                    className={`group relative aspect-square rounded-xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 ${visibleCards.has(actualIndex)
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-8"
+                      }`}
                     style={{
                       transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
                       transitionDelay: `${actualIndex * 0.1}s`

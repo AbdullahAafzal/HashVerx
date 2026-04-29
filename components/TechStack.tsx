@@ -74,14 +74,14 @@ const getLanguageImage = (lang: string): any => {
 
 export default function TechStack() {
   const column1Ref = useRef<HTMLDivElement>(null);
-  const column2Ref = useRef<HTMLDivElement>(null);
-  const column3Ref = useRef<HTMLDivElement>(null);
+  // const column2Ref = useRef<HTMLDivElement>(null);
+  // const column3Ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const itemHeight = 100; // Height of each item including gap (increased for larger icons)
     const speed1 = 25; // pixels per second - upward
     const speed2 = 30; // pixels per second - downward
-    const speed3 = 20; // pixels per second - upward (slower)
+    // const speed3 = 20; // pixels per second - upward (slower)
     const totalHeight = languages.length * itemHeight;
 
     // Column 1 - slides upward
@@ -104,7 +104,7 @@ export default function TechStack() {
           position1 += totalHeight; // Add back one set height for seamless loop
         }
 
-        column.style.transform = `translateY(${position1}px)`;
+        column.style.transform = `translateX(${position1}px)`;
         animationId1 = requestAnimationFrame(animate1);
       };
 
@@ -121,161 +121,192 @@ export default function TechStack() {
     };
 
     // Column 2 - slides downward
-    const animateColumn2 = () => {
-      const column = column2Ref.current;
-      if (!column) return;
+    // const animateColumn2 = () => {
+    //   const column = column2Ref.current;
+    //   if (!column) return;
 
-      // Start from negative position so items are positioned above and can scroll down from top
-      let position2 = -totalHeight;
-      let lastTime2 = performance.now();
-      let animationId2: number;
+    //   // Start from negative position so items are positioned above and can scroll down from top
+    //   let position2 = -totalHeight;
+    //   let lastTime2 = performance.now();
+    //   let animationId2: number;
 
-      const animate2 = (currentTime: number) => {
-        const deltaTime = (currentTime - lastTime2) / 1000;
-        lastTime2 = currentTime;
+    //   const animate2 = (currentTime: number) => {
+    //     const deltaTime = (currentTime - lastTime2) / 1000;
+    //     lastTime2 = currentTime;
 
-        position2 += speed2 * deltaTime; // Positive for downward
+    //     position2 += speed2 * deltaTime; // Positive for downward
 
-        // Seamless loop: when we've scrolled past 0 (one full set), reset to continue seamlessly
-        // This ensures items continuously appear from the top as they scroll down
-        if (position2 >= 0) {
-          position2 -= totalHeight; // Reset back to negative position for seamless loop
-        }
+    //     // Seamless loop: when we've scrolled past 0 (one full set), reset to continue seamlessly
+    //     // This ensures items continuously appear from the top as they scroll down
+    //     if (position2 >= 0) {
+    //       position2 -= totalHeight; // Reset back to negative position for seamless loop
+    //     }
 
-        column.style.transform = `translateY(${position2}px)`;
-        animationId2 = requestAnimationFrame(animate2);
-      };
+    //     column.style.transform = `translateX(${position2}px)`;
+    //     animationId2 = requestAnimationFrame(animate2);
+    //   };
 
-      const startDelay2 = setTimeout(() => {
-        animationId2 = requestAnimationFrame(animate2);
-      }, 1000);
+    //   const startDelay2 = setTimeout(() => {
+    //     animationId2 = requestAnimationFrame(animate2);
+    //   }, 1000);
 
-      return () => {
-        clearTimeout(startDelay2);
-        if (animationId2) {
-          cancelAnimationFrame(animationId2);
-        }
-      };
-    };
+    //   return () => {
+    //     clearTimeout(startDelay2);
+    //     if (animationId2) {
+    //       cancelAnimationFrame(animationId2);
+    //     }
+    //   };
+    // };
 
     // Column 3 - slides upward (slower)
-    const animateColumn3 = () => {
-      const column = column3Ref.current;
-      if (!column) return;
+    // const animateColumn3 = () => {
+    //   const column = column3Ref.current;
+    //   if (!column) return;
 
-      let position3 = 0;
-      let lastTime3 = performance.now();
-      let animationId3: number;
+    //   let position3 = 0;
+    //   let lastTime3 = performance.now();
+    //   let animationId3: number;
 
-      const animate3 = (currentTime: number) => {
-        const deltaTime = (currentTime - lastTime3) / 1000;
-        lastTime3 = currentTime;
+    //   const animate3 = (currentTime: number) => {
+    //     const deltaTime = (currentTime - lastTime3) / 1000;
+    //     lastTime3 = currentTime;
 
-        position3 -= speed3 * deltaTime; // Negative for upward
+    //     position3 -= speed3 * deltaTime; // Negative for upward
 
-        // Seamless loop: when we've scrolled one full set, reset to continue seamlessly
-        if (position3 <= -totalHeight) {
-          position3 += totalHeight; // Add back one set height for seamless loop
-        }
+    //     // Seamless loop: when we've scrolled one full set, reset to continue seamlessly
+    //     if (position3 <= -totalHeight) {
+    //       position3 += totalHeight; // Add back one set height for seamless loop
+    //     }
 
-        column.style.transform = `translateY(${position3}px)`;
-        animationId3 = requestAnimationFrame(animate3);
-      };
+    //     column.style.transform = `translateX(${position3}px)`;
+    //     animationId3 = requestAnimationFrame(animate3);
+    //   };
 
-      const startDelay3 = setTimeout(() => {
-        animationId3 = requestAnimationFrame(animate3);
-      }, 1500);
+    //   const startDelay3 = setTimeout(() => {
+    //     animationId3 = requestAnimationFrame(animate3);
+    //   }, 1500);
 
-      return () => {
-        clearTimeout(startDelay3);
-        if (animationId3) {
-          cancelAnimationFrame(animationId3);
-        }
-      };
-    };
+    //   return () => {
+    //     clearTimeout(startDelay3);
+    //     if (animationId3) {
+    //       cancelAnimationFrame(animationId3);
+    //     }
+    //   };
+    // };
 
     const cleanup1 = animateColumn1();
-    const cleanup2 = animateColumn2();
-    const cleanup3 = animateColumn3();
+    // const cleanup2 = animateColumn2();
+    // const cleanup3 = animateColumn3();
 
     return () => {
       if (cleanup1) cleanup1();
-      if (cleanup2) cleanup2();
-      if (cleanup3) cleanup3();
+      // if (cleanup2) cleanup2();
+      // if (cleanup3) cleanup3();
     };
   }, []);
 
   // Create three completely different arrangements for each column
   // Column 1: Original order
   const column1Languages = languages;
-  
+
   // Column 2: Completely different arrangement
-  const column2Languages = [
-    "MongoDB",
-    "PostgreSQL",
-    "MySQL",
-    "Redis",
-    "Docker",
-    "Kubernetes",
-    "AWS",
-    "Azure",
-    "GCP",
-    "PHP",
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "Python",
-    "Django",
-    "Node.js",
-    "Vue.js",
-    "Angular",
-  ];
-  
+  // const column2Languages = [
+  //   "MongoDB",
+  //   "PostgreSQL",
+  //   "MySQL",
+  //   "Redis",
+  //   "Docker",
+  //   "Kubernetes",
+  //   "AWS",
+  //   "Azure",
+  //   "GCP",
+  //   "PHP",
+  //   "React",
+  //   "TypeScript",
+  //   "JavaScript",
+  //   "Python",
+  //   "Django",
+  //   "Node.js",
+  //   "Vue.js",
+  //   "Angular",
+  // ];
+
   // Column 3: Another completely different arrangement
-  const column3Languages = [
-    "Docker",
-    "Kubernetes",
-    "AWS",
-    "Azure",
-    "GCP",
-    "PHP",
-    "Angular",
-    "Vue.js",
-    "Node.js",
-    "Django",
-    "Python",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Redis",
-    "MySQL",
-    "PostgreSQL",
-    "MongoDB",
-  ];
+  // const column3Languages = [
+  //   "Docker",
+  //   "Kubernetes",
+  //   "AWS",
+  //   "Azure",
+  //   "GCP",
+  //   "PHP",
+  //   "Angular",
+  //   "Vue.js",
+  //   "Node.js",
+  //   "Django",
+  //   "Python",
+  //   "JavaScript",
+  //   "TypeScript",
+  //   "React",
+  //   "Redis",
+  //   "MySQL",
+  //   "PostgreSQL",
+  //   "MongoDB",
+  // ];
 
   // Duplicate arrays for seamless scrolling
   const duplicatedLanguages1 = [...column1Languages, ...column1Languages, ...column1Languages, ...column1Languages];
-  const duplicatedLanguages2 = [...column2Languages, ...column2Languages, ...column2Languages, ...column2Languages];
-  const duplicatedLanguages3 = [...column3Languages, ...column3Languages, ...column3Languages, ...column3Languages];
+  // const duplicatedLanguages2 = [...column2Languages, ...column2Languages, ...column2Languages, ...column2Languages];
+  // const duplicatedLanguages3 = [...column3Languages, ...column3Languages, ...column3Languages, ...column3Languages];
 
   return (
     <section className="py-16 bg-transparent relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className=" container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-12 lg:gap-16 items-center">
           {/* Left Side - Sliding Columns */}
-          <div className="relative order-2 lg:order-1">
-            <div 
-              className="bg-white border border-[#51CFDF]/40 rounded-2xl p-6 lg:p-8 overflow-hidden h-[500px] relative"
+          <div className="container px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight text-white">
+              Our Software Company Helps you Achieve{" "}
+              <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent">
+                3X Growth
+              </span>
+            </h2>
+            <p className="text-base md:text-lg text-white mb-6 leading-relaxed">
+              We help you become a truly{" "}
+              <span className="underline decoration-[#fff] underline-offset-4">
+                data-driven organization
+              </span>
+              . Our{" "}
+              <span className="underline decoration-[#fff] underline-offset-4">
+                AI-powered solutions
+              </span>{" "}
+              drive smarter decisions and support the cultural change needed for
+              modern analytics.
+            </p>
+            <p className="text-base md:text-lg text-white leading-relaxed">
+              We design and implement{" "}
+              <span className="underline decoration-[#fff] underline-offset-4 ">
+                smart data solutions
+              </span>{" "}
+              that drive smarter decision-making while supporting the cultural
+              and organizational changes necessary for adopting advanced data
+              technologies across your enterprise.
+            </p>
+          </div>
+
+          {/* Right Side - Text Content */}
+          <div className="relative w-full">
+            <div
+              className=" border border-[#51CFDF]/40 rounded-2xl p-6 lg:p-8 overflow-hidden h-[170px] relative"
               style={{
                 boxShadow: "0 4px 12px rgba(81, 207, 223, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)"
               }}
             >
-              <div className="absolute inset-0 flex gap-4 justify-center items-start pt-2">
+              <div className="absolute inset-0 flex gap-4 flex-col justify-center items-start pt-2">
                 {/* Column 1 - Upward */}
-                <div className="relative w-full max-w-[120px] overflow-hidden">
+                <div className="relative w-full overflow-hidden">
                   <div
                     ref={column1Ref}
-                    className="flex flex-col gap-4"
+                    className="flex gap-4"
                     style={{
                       willChange: 'transform',
                     }}
@@ -308,10 +339,10 @@ export default function TechStack() {
                 </div>
 
                 {/* Column 2 - Downward */}
-                <div className="relative w-full max-w-[120px] overflow-hidden">
+                {/* <div className="relative w-full overflow-hidden">
                   <div
                     ref={column2Ref}
-                    className="flex flex-col gap-4"
+                    className="flex gap-4"
                     style={{
                       willChange: 'transform',
                     }}
@@ -341,13 +372,13 @@ export default function TechStack() {
                       );
                     })}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Column 3 - Upward (slower) */}
-                <div className="relative w-full max-w-[120px] overflow-hidden">
+                {/* <div className="relative w-full overflow-hidden">
                   <div
                     ref={column3Ref}
-                    className="flex flex-col gap-4"
+                    className="flex gap-4"
                     style={{
                       willChange: 'transform',
                     }}
@@ -377,41 +408,11 @@ export default function TechStack() {
                       );
                     })}
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
 
-          {/* Right Side - Text Content */}
-          <div className="order-1 lg:order-2">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
-              Our Software Company Helps you Achieve{" "}
-              <span className="bg-gradient-to-r from-[#51CFDF] via-[#6dd9e8] to-[#51CFDF] bg-clip-text text-transparent">
-                3X Growth
-              </span>
-            </h2>
-            <p className="text-base md:text-lg text-white mb-6 leading-relaxed">
-              We help you become a truly{" "}
-              <span className="underline decoration-[#51CFDF] underline-offset-4 text-[#51CFDF]">
-                data-driven organization
-              </span>
-              . Our{" "}
-              <span className="underline decoration-[#51CFDF] underline-offset-4 text-[#51CFDF]">
-                AI-powered solutions
-              </span>{" "}
-              drive smarter decisions and support the cultural change needed for
-              modern analytics.
-            </p>
-            <p className="text-base md:text-lg text-white leading-relaxed">
-              We design and implement{" "}
-              <span className="underline decoration-[#51CFDF] underline-offset-4 text-[#51CFDF]">
-                smart data solutions
-              </span>{" "}
-              that drive smarter decision-making while supporting the cultural
-              and organizational changes necessary for adopting advanced data
-              technologies across your enterprise.
-            </p>
-          </div>
         </div>
       </div>
     </section>

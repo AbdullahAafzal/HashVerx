@@ -19,7 +19,7 @@ export default function AboutPage() {
       <WhyChooseUs />
       <OurValues />
       <AwardsRecognition />
-      <OurJourney />
+      {/* <OurJourney /> */}
       <CTASection />
       <Footer />
     </main>

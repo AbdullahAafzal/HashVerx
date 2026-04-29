@@ -29,11 +29,11 @@ export default function WhoWeAre() {
   }, []);
 
   return (
-    <section className="py-20 bg-white relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+    <section className="py-20 relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={ref}
-          className="bg-white/60 backdrop-blur-xl border border-[#51CFDF]/30 rounded-2xl p-8 md:p-12"
+          className="border border-[#51CFDF]/30 rounded-2xl p-8 md:p-12"
           style={{
             boxShadow: '0 8px 32px rgba(81, 207, 223, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
           }}
@@ -41,9 +41,8 @@ export default function WhoWeAre() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text */}
             <div
-              className={`transition-all duration-700 ${
-                isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
-              }`}
+              className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+                }`}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Who We Are
@@ -63,9 +62,8 @@ export default function WhoWeAre() {
 
             {/* Right Side - Image */}
             <div
-              className={`transition-all duration-700 delay-200 ${
-                isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-              }`}
+              className={`transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+                }`}
             >
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
                 <Image
